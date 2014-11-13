@@ -15,6 +15,22 @@
 		8DAAAD6A1A1569890003573B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAAAD681A1569890003573B /* LaunchScreen.xib */; };
 		8DAAAD761A1569890003573B /* InNews_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD751A1569890003573B /* InNews_DemoTests.m */; };
 		8DAAAD821A1569DC0003573B /* InNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD811A1569DC0003573B /* InNews.m */; };
+		8DAAADA71A156AE20003573B /* YQHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD861A156AE20003573B /* YQHTTPRequestOperation.m */; };
+		8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD881A156AE20003573B /* YQHTTPRequestOperationManager.m */; };
+		8DAAADA91A156AE20003573B /* YQHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD8A1A156AE20003573B /* YQHTTPSessionManager.m */; };
+		8DAAADAA1A156AE20003573B /* YQNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD8D1A156AE20003573B /* YQNetworkReachabilityManager.m */; };
+		8DAAADAB1A156AE20003573B /* YQSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD8F1A156AE20003573B /* YQSecurityPolicy.m */; };
+		8DAAADAC1A156AE20003573B /* YQURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD911A156AE20003573B /* YQURLConnectionOperation.m */; };
+		8DAAADAD1A156AE20003573B /* YQURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD931A156AE20003573B /* YQURLRequestSerialization.m */; };
+		8DAAADAE1A156AE20003573B /* YQURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD951A156AE20003573B /* YQURLResponseSerialization.m */; };
+		8DAAADAF1A156AE20003573B /* YQURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD971A156AE20003573B /* YQURLSessionManager.m */; };
+		8DAAADB01A156AE20003573B /* YQParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD991A156AE20003573B /* YQParse.m */; };
+		8DAAADB11A156AE20003573B /* YQParseAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD9B1A156AE20003573B /* YQParseAnalytics.m */; };
+		8DAAADB21A156AE20003573B /* YQParseImgaeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD9E1A156AE20003573B /* YQParseImgaeView.m */; };
+		8DAAADB31A156AE20003573B /* YQParseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA01A156AE20003573B /* YQParseObject.m */; };
+		8DAAADB41A156AE20003573B /* YQParseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA21A156AE20003573B /* YQParseQuery.m */; };
+		8DAAADB51A156AE20003573B /* YQParseRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA41A156AE20003573B /* YQParseRequestOperationManager.m */; };
+		8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA61A156AE20003573B /* YQParseUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +59,40 @@
 		8DAAAD751A1569890003573B /* InNews_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InNews_DemoTests.m; sourceTree = "<group>"; };
 		8DAAAD801A1569DC0003573B /* InNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNews.h; sourceTree = "<group>"; };
 		8DAAAD811A1569DC0003573B /* InNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNews.m; sourceTree = "<group>"; };
+		8DAAAD851A156AE20003573B /* YQHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperation.h; sourceTree = "<group>"; };
+		8DAAAD861A156AE20003573B /* YQHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8DAAAD871A156AE20003573B /* YQHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		8DAAAD881A156AE20003573B /* YQHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		8DAAAD891A156AE20003573B /* YQHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPSessionManager.h; sourceTree = "<group>"; };
+		8DAAAD8A1A156AE20003573B /* YQHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPSessionManager.m; sourceTree = "<group>"; };
+		8DAAAD8B1A156AE20003573B /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
+		8DAAAD8C1A156AE20003573B /* YQNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		8DAAAD8D1A156AE20003573B /* YQNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		8DAAAD8E1A156AE20003573B /* YQSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSecurityPolicy.h; sourceTree = "<group>"; };
+		8DAAAD8F1A156AE20003573B /* YQSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQSecurityPolicy.m; sourceTree = "<group>"; };
+		8DAAAD901A156AE20003573B /* YQURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLConnectionOperation.h; sourceTree = "<group>"; };
+		8DAAAD911A156AE20003573B /* YQURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLConnectionOperation.m; sourceTree = "<group>"; };
+		8DAAAD921A156AE20003573B /* YQURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLRequestSerialization.h; sourceTree = "<group>"; };
+		8DAAAD931A156AE20003573B /* YQURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLRequestSerialization.m; sourceTree = "<group>"; };
+		8DAAAD941A156AE20003573B /* YQURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLResponseSerialization.h; sourceTree = "<group>"; };
+		8DAAAD951A156AE20003573B /* YQURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLResponseSerialization.m; sourceTree = "<group>"; };
+		8DAAAD961A156AE20003573B /* YQURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLSessionManager.h; sourceTree = "<group>"; };
+		8DAAAD971A156AE20003573B /* YQURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLSessionManager.m; sourceTree = "<group>"; };
+		8DAAAD981A156AE20003573B /* YQParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParse.h; sourceTree = "<group>"; };
+		8DAAAD991A156AE20003573B /* YQParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParse.m; sourceTree = "<group>"; };
+		8DAAAD9A1A156AE20003573B /* YQParseAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseAnalytics.h; sourceTree = "<group>"; };
+		8DAAAD9B1A156AE20003573B /* YQParseAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseAnalytics.m; sourceTree = "<group>"; };
+		8DAAAD9C1A156AE20003573B /* YQParseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseConstants.h; sourceTree = "<group>"; };
+		8DAAAD9D1A156AE20003573B /* YQParseImgaeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseImgaeView.h; sourceTree = "<group>"; };
+		8DAAAD9E1A156AE20003573B /* YQParseImgaeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseImgaeView.m; sourceTree = "<group>"; };
+		8DAAAD9F1A156AE20003573B /* YQParseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseObject.h; sourceTree = "<group>"; };
+		8DAAADA01A156AE20003573B /* YQParseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseObject.m; sourceTree = "<group>"; };
+		8DAAADA11A156AE20003573B /* YQParseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseQuery.h; sourceTree = "<group>"; };
+		8DAAADA21A156AE20003573B /* YQParseQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseQuery.m; sourceTree = "<group>"; };
+		8DAAADA31A156AE20003573B /* YQParseRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseRequestOperationManager.h; sourceTree = "<group>"; };
+		8DAAADA41A156AE20003573B /* YQParseRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseRequestOperationManager.m; sourceTree = "<group>"; };
+		8DAAADA51A156AE20003573B /* YQParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseUser.h; sourceTree = "<group>"; };
+		8DAAADA61A156AE20003573B /* YQParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +178,59 @@
 			children = (
 				8DAAAD801A1569DC0003573B /* InNews.h */,
 				8DAAAD811A1569DC0003573B /* InNews.m */,
+				8DAAAD831A156AE20003573B /* YQParse */,
 			);
 			path = InNews;
 			sourceTree = SOURCE_ROOT;
+		};
+		8DAAAD831A156AE20003573B /* YQParse */ = {
+			isa = PBXGroup;
+			children = (
+				8DAAAD841A156AE20003573B /* YQNetworking */,
+				8DAAAD981A156AE20003573B /* YQParse.h */,
+				8DAAAD991A156AE20003573B /* YQParse.m */,
+				8DAAAD9A1A156AE20003573B /* YQParseAnalytics.h */,
+				8DAAAD9B1A156AE20003573B /* YQParseAnalytics.m */,
+				8DAAAD9C1A156AE20003573B /* YQParseConstants.h */,
+				8DAAAD9D1A156AE20003573B /* YQParseImgaeView.h */,
+				8DAAAD9E1A156AE20003573B /* YQParseImgaeView.m */,
+				8DAAAD9F1A156AE20003573B /* YQParseObject.h */,
+				8DAAADA01A156AE20003573B /* YQParseObject.m */,
+				8DAAADA11A156AE20003573B /* YQParseQuery.h */,
+				8DAAADA21A156AE20003573B /* YQParseQuery.m */,
+				8DAAADA31A156AE20003573B /* YQParseRequestOperationManager.h */,
+				8DAAADA41A156AE20003573B /* YQParseRequestOperationManager.m */,
+				8DAAADA51A156AE20003573B /* YQParseUser.h */,
+				8DAAADA61A156AE20003573B /* YQParseUser.m */,
+			);
+			path = YQParse;
+			sourceTree = "<group>";
+		};
+		8DAAAD841A156AE20003573B /* YQNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8DAAAD851A156AE20003573B /* YQHTTPRequestOperation.h */,
+				8DAAAD861A156AE20003573B /* YQHTTPRequestOperation.m */,
+				8DAAAD871A156AE20003573B /* YQHTTPRequestOperationManager.h */,
+				8DAAAD881A156AE20003573B /* YQHTTPRequestOperationManager.m */,
+				8DAAAD891A156AE20003573B /* YQHTTPSessionManager.h */,
+				8DAAAD8A1A156AE20003573B /* YQHTTPSessionManager.m */,
+				8DAAAD8B1A156AE20003573B /* YQNetworking.h */,
+				8DAAAD8C1A156AE20003573B /* YQNetworkReachabilityManager.h */,
+				8DAAAD8D1A156AE20003573B /* YQNetworkReachabilityManager.m */,
+				8DAAAD8E1A156AE20003573B /* YQSecurityPolicy.h */,
+				8DAAAD8F1A156AE20003573B /* YQSecurityPolicy.m */,
+				8DAAAD901A156AE20003573B /* YQURLConnectionOperation.h */,
+				8DAAAD911A156AE20003573B /* YQURLConnectionOperation.m */,
+				8DAAAD921A156AE20003573B /* YQURLRequestSerialization.h */,
+				8DAAAD931A156AE20003573B /* YQURLRequestSerialization.m */,
+				8DAAAD941A156AE20003573B /* YQURLResponseSerialization.h */,
+				8DAAAD951A156AE20003573B /* YQURLResponseSerialization.m */,
+				8DAAAD961A156AE20003573B /* YQURLSessionManager.h */,
+				8DAAAD971A156AE20003573B /* YQURLSessionManager.m */,
+			);
+			path = YQNetworking;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -232,9 +332,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAAADB21A156AE20003573B /* YQParseImgaeView.m in Sources */,
+				8DAAADAB1A156AE20003573B /* YQSecurityPolicy.m in Sources */,
+				8DAAADB51A156AE20003573B /* YQParseRequestOperationManager.m in Sources */,
+				8DAAADAE1A156AE20003573B /* YQURLResponseSerialization.m in Sources */,
+				8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */,
 				8DAAAD621A1569890003573B /* ViewController.m in Sources */,
+				8DAAADAF1A156AE20003573B /* YQURLSessionManager.m in Sources */,
+				8DAAADB31A156AE20003573B /* YQParseObject.m in Sources */,
+				8DAAADAA1A156AE20003573B /* YQNetworkReachabilityManager.m in Sources */,
+				8DAAADA71A156AE20003573B /* YQHTTPRequestOperation.m in Sources */,
+				8DAAADB11A156AE20003573B /* YQParseAnalytics.m in Sources */,
+				8DAAADA91A156AE20003573B /* YQHTTPSessionManager.m in Sources */,
+				8DAAADB41A156AE20003573B /* YQParseQuery.m in Sources */,
+				8DAAADB01A156AE20003573B /* YQParse.m in Sources */,
+				8DAAADAC1A156AE20003573B /* YQURLConnectionOperation.m in Sources */,
 				8DAAAD5F1A1569890003573B /* AppDelegate.m in Sources */,
+				8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */,
 				8DAAAD5C1A1569890003573B /* main.m in Sources */,
+				8DAAADAD1A156AE20003573B /* YQURLRequestSerialization.m in Sources */,
 				8DAAAD821A1569DC0003573B /* InNews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
