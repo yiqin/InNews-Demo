@@ -31,6 +31,7 @@
 		8DAAADB41A156AE20003573B /* YQParseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA21A156AE20003573B /* YQParseQuery.m */; };
 		8DAAADB51A156AE20003573B /* YQParseRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA41A156AE20003573B /* YQParseRequestOperationManager.m */; };
 		8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA61A156AE20003573B /* YQParseUser.m */; };
+		8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADB81A15768C0003573B /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		8DAAADA41A156AE20003573B /* YQParseRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseRequestOperationManager.m; sourceTree = "<group>"; };
 		8DAAADA51A156AE20003573B /* YQParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseUser.h; sourceTree = "<group>"; };
 		8DAAADA61A156AE20003573B /* YQParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseUser.m; sourceTree = "<group>"; };
+		8DAAADB71A15768C0003573B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		8DAAADB81A15768C0003573B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				8DAAAD5E1A1569890003573B /* AppDelegate.m */,
 				8DAAAD601A1569890003573B /* ViewController.h */,
 				8DAAAD611A1569890003573B /* ViewController.m */,
+				8DAAADB71A15768C0003573B /* SecondViewController.h */,
+				8DAAADB81A15768C0003573B /* SecondViewController.m */,
 				8DAAAD631A1569890003573B /* Main.storyboard */,
 				8DAAAD661A1569890003573B /* Images.xcassets */,
 				8DAAAD681A1569890003573B /* LaunchScreen.xib */,
@@ -335,6 +340,7 @@
 				8DAAADB21A156AE20003573B /* YQParseImgaeView.m in Sources */,
 				8DAAADAB1A156AE20003573B /* YQSecurityPolicy.m in Sources */,
 				8DAAADB51A156AE20003573B /* YQParseRequestOperationManager.m in Sources */,
+				8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */,
 				8DAAADAE1A156AE20003573B /* YQURLResponseSerialization.m in Sources */,
 				8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */,
 				8DAAAD621A1569890003573B /* ViewController.m in Sources */,
