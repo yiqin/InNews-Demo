@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "InNews.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [InNews setApplicationId:@"OwnvY79qyoEj4FcUgx5YM79Df" apiKey:@"biUxaCvg6G"];
+    
+    
     return YES;
 }
 
