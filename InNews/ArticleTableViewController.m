@@ -8,8 +8,17 @@
 
 #import "ArticleTableViewController.h"
 #import "ArticleBlockTableViewCell.h"
+#import "AdTableViewCell.h"
+
+#import "YQNetworking.h"
 
 @interface ArticleTableViewController ()
+
+@property(nonatomic) BOOL hasAd;
+@property(nonatomic) int adPosition;
+@property(strong, nonatomic) NSMutableString *wholeArticle;
+
+@property(nonatomic) BOOL firstTimeLoad;
 
 @end
 
@@ -23,6 +32,14 @@
         self.tableView.separatorColor = [UIColor clearColor];
         
         self.blocks = [[NSMutableDictionary alloc] init];
+        self.wholeArticle = [[NSMutableString alloc] init];
+        self.adPosition = 2;
+        
+        // Change it later.
+        self.hasAd = YES;
+        
+        
+        self.firstTimeLoad = YES;
     }
     return self;
 }
@@ -30,11 +47,61 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    if (self.firstTimeLoad) {
+        [self.wholeArticle setString:@""];
+        
+        NSArray *keys = [self.blocks allKeys];
+        NSSortDescriptor* sortOrder = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: YES];
+        NSArray *sortKeys = [keys sortedArrayUsingDescriptors: [NSArray arrayWithObject: sortOrder]];
+        
+        NSLog(@"%@", sortKeys);
+        
+        for (int i=0; i<[sortKeys count]; i++) {
+            [self.wholeArticle appendString: [self.blocks objectForKey:[sortKeys objectAtIndex:i]]];
+        }
+        NSLog(@"%@", self.wholeArticle);
+        
+        
+        
+        [self doTextAnalytics:self.wholeArticle];
+        
+        
+        self.firstTimeLoad = NO;
+    }
+}
+
+- (void)doTextAnalytics:(NSString *)text
+{
+    YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
+    NSDictionary *params = @{@"text": text};
+    
+    manager.requestSerializer = [YQJSONRequestSerializer serializer];
+    manager.responseSerializer = [YQJSONResponseSerializer serializer];
+    
+    [manager.requestSerializer setValue:@"xiL7zSTisvmshlzqU2b8HimW98NFp1MvblHjsnGVIXnFab2CzB" forHTTPHeaderField:@"X-Mashape-Key"];
+    
+    [manager GET:@"https://aylien-text.p.mashape.com/hashtags" parameters:params success:^(YQHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        
+    } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+        
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +113,7 @@
 - (void)setBlocks:(NSMutableDictionary *)blocks
 {
     _blocks = blocks;
+
     
     // No need to reload.
     // [self.tableView reloadData];
@@ -61,28 +129,52 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.blocks count];
+    if (self.hasAd) {
+        return [self.blocks count]+1;
+    }
+    else {
+        return [self.blocks count];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
-    return [ArticleBlockTableViewCell cellHeightWithText:tempText];
+    if (indexPath.row == self.adPosition) {
+        return [AdTableViewCell cellHeight];
+    }
+    else {
+        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
+        return [ArticleBlockTableViewCell cellHeightWithText:tempText];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString static *articleCellIdentifier = @"ArticleCellIdentifier";
-    ArticleBlockTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articleCellIdentifier];
-    if (cell == nil) {
-        cell = [[ArticleBlockTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:articleCellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
-    // Configure the cell...
-    NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
-    [cell loadCellWithText:tempText];
+    NSString static *adCellIdentifier = @"AdCellIdentifier";
     
-    return cell;
+    if (indexPath.row == self.adPosition) {
+        AdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articleCellIdentifier];
+        if (cell == nil) {
+            cell = [[AdTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:adCellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        
+        return cell;
+    }
+    else {
+        ArticleBlockTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articleCellIdentifier];
+        if (cell == nil) {
+            cell = [[ArticleBlockTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:articleCellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        // Configure the cell...
+        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
+        [cell loadCellWithText:tempText];
+        return cell;
+    }
+    
+    
 }
 
 

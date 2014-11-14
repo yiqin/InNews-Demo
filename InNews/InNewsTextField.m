@@ -41,8 +41,7 @@
     
     [self.blocks setObject:text forKey: [NSNumber numberWithInt:self.currentIndex]];
     self.currentIndex++;
-    NSLog(@"%@", self.blocks);
-    
+    // NSLog(@"%@", self.blocks);
     
     self.articleTVC.blocks = self.blocks;
 }

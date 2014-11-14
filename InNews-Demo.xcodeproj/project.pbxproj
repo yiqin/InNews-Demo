@@ -37,6 +37,7 @@
 		8DAAADC21A1582920003573B /* ArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC11A1582920003573B /* ArticleTableViewController.m */; };
 		8DAAADC51A1586730003573B /* ArticleBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */; };
 		8DAAADC81A1591190003573B /* InNewsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC71A1591190003573B /* InNewsLabel.m */; };
+		8DAAADCB1A15A2760003573B /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADCA1A15A2760003573B /* AdTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleBlockTableViewCell.m; sourceTree = "<group>"; };
 		8DAAADC61A1591190003573B /* InNewsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNewsLabel.h; sourceTree = "<group>"; };
 		8DAAADC71A1591190003573B /* InNewsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNewsLabel.m; sourceTree = "<group>"; };
+		8DAAADC91A15A2760003573B /* AdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
+		8DAAADCA1A15A2760003573B /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 				8DAAADC11A1582920003573B /* ArticleTableViewController.m */,
 				8DAAADC31A1586730003573B /* ArticleBlockTableViewCell.h */,
 				8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */,
+				8DAAADC91A15A2760003573B /* AdTableViewCell.h */,
+				8DAAADCA1A15A2760003573B /* AdTableViewCell.m */,
 				8DAAADC61A1591190003573B /* InNewsLabel.h */,
 				8DAAADC71A1591190003573B /* InNewsLabel.m */,
 				8DAAAD831A156AE20003573B /* YQParse */,
@@ -379,6 +384,7 @@
 				8DAAADAF1A156AE20003573B /* YQURLSessionManager.m in Sources */,
 				8DAAADC51A1586730003573B /* ArticleBlockTableViewCell.m in Sources */,
 				8DAAADB31A156AE20003573B /* YQParseObject.m in Sources */,
+				8DAAADCB1A15A2760003573B /* AdTableViewCell.m in Sources */,
 				8DAAADAA1A156AE20003573B /* YQNetworkReachabilityManager.m in Sources */,
 				8DAAADA71A156AE20003573B /* YQHTTPRequestOperation.m in Sources */,
 				8DAAADB11A156AE20003573B /* YQParseAnalytics.m in Sources */,
