@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 
-@interface ArticleTableViewController : UITableViewController
+@interface ArticleTableViewController : UITableViewController <SWTableViewCellDelegate>
 
 
 @property(strong, nonatomic) NSMutableDictionary *blocks;

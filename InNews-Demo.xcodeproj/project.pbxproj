@@ -39,6 +39,16 @@
 		8DAAADC81A1591190003573B /* InNewsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC71A1591190003573B /* InNewsLabel.m */; };
 		8DAAADCB1A15A2760003573B /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADCA1A15A2760003573B /* AdTableViewCell.m */; };
 		8DAAADD21A15CF750003573B /* Ad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADD11A15CF750003573B /* Ad.m */; };
+		8DAAADE01A1600830003573B /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADD51A1600830003573B /* NSMutableArray+SWUtilityButtons.m */; };
+		8DAAADE11A1600830003573B /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADD71A1600830003573B /* SWCellScrollView.m */; };
+		8DAAADE21A1600830003573B /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADD91A1600830003573B /* SWLongPressGestureRecognizer.m */; };
+		8DAAADE31A1600830003573B /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADDB1A1600830003573B /* SWTableViewCell.m */; };
+		8DAAADE41A1600830003573B /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADDD1A1600830003573B /* SWUtilityButtonTapGestureRecognizer.m */; };
+		8DAAADE51A1600830003573B /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADDF1A1600830003573B /* SWUtilityButtonView.m */; };
+		8DAAADE71A16015D0003573B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADE61A16015D0003573B /* QuartzCore.framework */; };
+		8DAAADE91A1601640003573B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADE81A1601640003573B /* UIKit.framework */; };
+		8DAAADEB1A1601690003573B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADEA1A1601690003573B /* Foundation.framework */; };
+		8DAAADED1A16016F0003573B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADEC1A16016F0003573B /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +126,22 @@
 		8DAAADCA1A15A2760003573B /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 		8DAAADD01A15CF750003573B /* Ad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad.h; sourceTree = "<group>"; };
 		8DAAADD11A15CF750003573B /* Ad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad.m; sourceTree = "<group>"; };
+		8DAAADD41A1600830003573B /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		8DAAADD51A1600830003573B /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		8DAAADD61A1600830003573B /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		8DAAADD71A1600830003573B /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		8DAAADD81A1600830003573B /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		8DAAADD91A1600830003573B /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		8DAAADDA1A1600830003573B /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		8DAAADDB1A1600830003573B /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		8DAAADDC1A1600830003573B /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		8DAAADDD1A1600830003573B /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		8DAAADDE1A1600830003573B /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		8DAAADDF1A1600830003573B /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		8DAAADE61A16015D0003573B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8DAAADE81A1601640003573B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8DAAADEA1A1601690003573B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8DAAADEC1A16016F0003573B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +149,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAAADED1A16016F0003573B /* CoreGraphics.framework in Frameworks */,
+				8DAAADEB1A1601690003573B /* Foundation.framework in Frameworks */,
+				8DAAADE91A1601640003573B /* UIKit.framework in Frameworks */,
+				8DAAADE71A16015D0003573B /* QuartzCore.framework in Frameworks */,
 				8DAAADBC1A1578720003573B /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +245,7 @@
 				8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */,
 				8DAAADC91A15A2760003573B /* AdTableViewCell.h */,
 				8DAAADCA1A15A2760003573B /* AdTableViewCell.m */,
+				8DAAADD31A1600830003573B /* SWTableViewCell */,
 				8DAAADC61A1591190003573B /* InNewsLabel.h */,
 				8DAAADC71A1591190003573B /* InNewsLabel.m */,
 				8DAAAD831A156AE20003573B /* YQParse */,
@@ -274,9 +305,33 @@
 		8DAAADBA1A15785E0003573B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DAAADEC1A16016F0003573B /* CoreGraphics.framework */,
+				8DAAADEA1A1601690003573B /* Foundation.framework */,
+				8DAAADE81A1601640003573B /* UIKit.framework */,
+				8DAAADE61A16015D0003573B /* QuartzCore.framework */,
 				8DAAADBB1A1578720003573B /* iAd.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DAAADD31A1600830003573B /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8DAAADD41A1600830003573B /* NSMutableArray+SWUtilityButtons.h */,
+				8DAAADD51A1600830003573B /* NSMutableArray+SWUtilityButtons.m */,
+				8DAAADD61A1600830003573B /* SWCellScrollView.h */,
+				8DAAADD71A1600830003573B /* SWCellScrollView.m */,
+				8DAAADD81A1600830003573B /* SWLongPressGestureRecognizer.h */,
+				8DAAADD91A1600830003573B /* SWLongPressGestureRecognizer.m */,
+				8DAAADDA1A1600830003573B /* SWTableViewCell.h */,
+				8DAAADDB1A1600830003573B /* SWTableViewCell.m */,
+				8DAAADDC1A1600830003573B /* SWUtilityButtonTapGestureRecognizer.h */,
+				8DAAADDD1A1600830003573B /* SWUtilityButtonTapGestureRecognizer.m */,
+				8DAAADDE1A1600830003573B /* SWUtilityButtonView.h */,
+				8DAAADDF1A1600830003573B /* SWUtilityButtonView.m */,
+			);
+			name = SWTableViewCell;
+			path = PodFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,22 +444,28 @@
 				8DAAADAF1A156AE20003573B /* YQURLSessionManager.m in Sources */,
 				8DAAADC51A1586730003573B /* ArticleBlockTableViewCell.m in Sources */,
 				8DAAADB31A156AE20003573B /* YQParseObject.m in Sources */,
+				8DAAADE01A1600830003573B /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				8DAAADCB1A15A2760003573B /* AdTableViewCell.m in Sources */,
 				8DAAADAA1A156AE20003573B /* YQNetworkReachabilityManager.m in Sources */,
 				8DAAADA71A156AE20003573B /* YQHTTPRequestOperation.m in Sources */,
+				8DAAADE11A1600830003573B /* SWCellScrollView.m in Sources */,
 				8DAAADB11A156AE20003573B /* YQParseAnalytics.m in Sources */,
 				8DAAADA91A156AE20003573B /* YQHTTPSessionManager.m in Sources */,
+				8DAAADE31A1600830003573B /* SWTableViewCell.m in Sources */,
 				8DAAADB41A156AE20003573B /* YQParseQuery.m in Sources */,
 				8DAAADD21A15CF750003573B /* Ad.m in Sources */,
 				8DAAADB01A156AE20003573B /* YQParse.m in Sources */,
 				8DAAADAC1A156AE20003573B /* YQURLConnectionOperation.m in Sources */,
+				8DAAADE41A1600830003573B /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				8DAAAD5F1A1569890003573B /* AppDelegate.m in Sources */,
 				8DAAADC21A1582920003573B /* ArticleTableViewController.m in Sources */,
+				8DAAADE21A1600830003573B /* SWLongPressGestureRecognizer.m in Sources */,
 				8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */,
 				8DAAAD5C1A1569890003573B /* main.m in Sources */,
 				8DAAADBF1A157E3A0003573B /* InNewsTextField.m in Sources */,
 				8DAAADC81A1591190003573B /* InNewsLabel.m in Sources */,
 				8DAAADAD1A156AE20003573B /* YQURLRequestSerialization.m in Sources */,
+				8DAAADE51A1600830003573B /* SWUtilityButtonView.m in Sources */,
 				8DAAAD821A1569DC0003573B /* InNews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
