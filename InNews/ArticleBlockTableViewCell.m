@@ -43,11 +43,15 @@
 
 - (void)loadCellWithText:(NSString *)text
 {
+    self.paragraphLabel.hidden = NO;
+    self.articleImageView.hidden = YES;
     [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextField getFont] text:text];
 }
 
 - (void)loadCellWithImage:(UIImage *)image
 {
+    self.articleImageView.hidden = NO;
+    self.paragraphLabel.hidden = YES;
     [self.articleImageView setImage:image];
 }
 
@@ -80,7 +84,9 @@
         [self loadCellWithText:articleBlock.text];
     }
     else {
-        // [self loadCellWithImage:articleBlock.articleImage];
+        if (articleBlock.articleImage) {
+            [self loadCellWithImage:articleBlock.articleImage];
+        }
     }
 }
 

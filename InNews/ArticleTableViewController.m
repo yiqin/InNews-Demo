@@ -170,11 +170,13 @@
     
     NSDictionary *dict = [notification userInfo];
     NSNumber *tempNumber = [dict objectForKey:@"currentIndex"];
+    int blockIndex = [self getBlockIndex:tempNumber.intValue];
     
-    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:tempNumber.intValue inSection:0];
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:blockIndex inSection:0];
+    
     
     [self.tableView beginUpdates];
-    // [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
     
 }
@@ -265,7 +267,7 @@
         
     }
     else {
-        int blockIndex = [self getBlockIndex:indexPath.row];
+        
         
         ArticleBlockTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articleCellIdentifier];
         if (cell == nil) {
@@ -273,7 +275,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         // Configure the cell...
-        
+        int blockIndex = [self getBlockIndex:indexPath.row];
         ArticleBlock *temp = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
         
         

@@ -44,6 +44,7 @@
 {
     ArticleBlock *articleBlock = [[ArticleBlock alloc] initWithImageURL:url];
     [self.blocks setObject:articleBlock forKey: [NSNumber numberWithInt:self.currentIndex]];
+    articleBlock.currentIndex = self.currentIndex;
     self.currentIndex++;
     self.articleTVC.blocks = self.blocks;
 }
@@ -56,6 +57,7 @@
         
         ArticleBlock *articleBlock = [[ArticleBlock alloc] initWithText:blockItem];
         [self.blocks setObject:articleBlock forKey: [NSNumber numberWithInt:self.currentIndex]];
+        articleBlock.currentIndex = self.currentIndex;
         self.currentIndex++;
     }
     // NSLog(@"%@", self.blocks);

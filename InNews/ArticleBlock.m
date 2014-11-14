@@ -48,6 +48,7 @@
     if (self) {
         _isText = NO;
         _text = nil;
+        [self loadImage:url];
     }
     return self;
 }
@@ -64,7 +65,7 @@
         // self.adImageView = [[UIImageView alloc] initWithImage:responseObject];
         self.articleImage = responseObject;
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ImageIsReady" object:nil userInfo:@{@"currentIndex":[NSNumber numberWithInt:index]}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ImageIsReady" object:nil userInfo:@{@"currentIndex":[NSNumber numberWithInt:self.currentIndex]}];
         
     } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Image error: %@", error);
