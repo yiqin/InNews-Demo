@@ -32,6 +32,7 @@
 		8DAAADB51A156AE20003573B /* YQParseRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA41A156AE20003573B /* YQParseRequestOperationManager.m */; };
 		8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA61A156AE20003573B /* YQParseUser.m */; };
 		8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADB81A15768C0003573B /* SecondViewController.m */; };
+		8DAAADBC1A1578720003573B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADBB1A1578720003573B /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		8DAAADA61A156AE20003573B /* YQParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseUser.m; sourceTree = "<group>"; };
 		8DAAADB71A15768C0003573B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		8DAAADB81A15768C0003573B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		8DAAADBB1A1578720003573B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAAADBC1A1578720003573B /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +122,7 @@
 		8DAAAD4D1A1569890003573B = {
 			isa = PBXGroup;
 			children = (
+				8DAAADBA1A15785E0003573B /* Frameworks */,
 				8DAAAD581A1569890003573B /* InNews-Demo */,
 				8DAAAD721A1569890003573B /* InNews-DemoTests */,
 				8DAAAD571A1569890003573B /* Products */,
@@ -235,6 +239,14 @@
 				8DAAAD971A156AE20003573B /* YQURLSessionManager.m */,
 			);
 			path = YQNetworking;
+			sourceTree = "<group>";
+		};
+		8DAAADBA1A15785E0003573B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DAAADBB1A1578720003573B /* iAd.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
