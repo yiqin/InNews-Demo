@@ -189,7 +189,7 @@
 		8DAAAD581A1569890003573B /* InNews-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				8DAAAD7F1A1569A30003573B /* InNews */,
+				8DAAAD7F1A1569A30003573B /* CocoaNews */,
 				8DAAAD5D1A1569890003573B /* AppDelegate.h */,
 				8DAAAD5E1A1569890003573B /* AppDelegate.m */,
 				8DAAAD601A1569890003573B /* ViewController.h */,
@@ -230,7 +230,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8DAAAD7F1A1569A30003573B /* InNews */ = {
+		8DAAAD7F1A1569A30003573B /* CocoaNews */ = {
 			isa = PBXGroup;
 			children = (
 				8DAAAD801A1569DC0003573B /* InNews.h */,
@@ -250,6 +250,7 @@
 				8DAAADC71A1591190003573B /* InNewsLabel.m */,
 				8DAAAD831A156AE20003573B /* YQParse */,
 			);
+			name = CocoaNews;
 			path = InNews;
 			sourceTree = SOURCE_ROOT;
 		};

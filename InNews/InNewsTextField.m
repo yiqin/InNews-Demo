@@ -32,21 +32,40 @@
         self.articleTVC = [[ArticleTableViewController alloc] initWithNibName:nil bundle:nil];
         self.articleTVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
         [self addSubview:self.articleTVC.view];
+        
+        self.font = [UIFont systemFontOfSize:15];
     }
     return self;
 }
 
 -(void)addText:(NSString *)text
 {
+    NSArray *blockItems = [text componentsSeparatedByString:@"\n\n"];
     
-    [self.blocks setObject:text forKey: [NSNumber numberWithInt:self.currentIndex]];
-    self.currentIndex++;
+    for (NSString*blockItem in blockItems) {
+        [self.blocks setObject:blockItem forKey: [NSNumber numberWithInt:self.currentIndex]];
+        self.currentIndex++;
+    }
     // NSLog(@"%@", self.blocks);
     
     self.articleTVC.blocks = self.blocks;
 }
 
+-(void)setText:(NSString *)text
+{
+    _text = text;
+    [self addText:text];
+}
 
+-(void)setFont:(UIFont *)font
+{
+    _font = font;
+}
+
++(UIFont *)getFont
+{
+    return [UIFont systemFontOfSize:16];
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

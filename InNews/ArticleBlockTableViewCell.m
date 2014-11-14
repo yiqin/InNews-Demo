@@ -7,6 +7,7 @@
 //
 
 #import "ArticleBlockTableViewCell.h"
+#import "InNewsTextField.h"
 #import "InNewsLabel.h"
 
 @interface ArticleBlockTableViewCell()
@@ -36,7 +37,7 @@
 
 - (void)loadCellWithText:(NSString *)text
 {
-    [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[UIFont systemFontOfSize:16] text:text];
+    [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[InNewsTextField getFont] text:text];
 }
 
 - (void)awakeFromNib {
@@ -53,7 +54,7 @@
 {
     InNewsLabel *inNewsLabel = [[InNewsLabel alloc] init];
     
-    [inNewsLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[UIFont systemFontOfSize:16] text:text];
+    [inNewsLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[InNewsTextField getFont] text:text];
     
     // [inNewsLabel updateFrameWithText:text];
     

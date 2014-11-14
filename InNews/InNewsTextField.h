@@ -10,6 +10,12 @@
 
 @interface InNewsTextField : UIView
 
+@property(strong, nonatomic) UIFont *font;
+@property(strong, nonatomic) NSString* text;
+
 - (void)addText:(NSString *)text;
+- (void)setFont:(UIFont *)font;
+
++(UIFont *)getFont;
 
 @end
