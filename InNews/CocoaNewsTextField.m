@@ -8,6 +8,7 @@
 
 #import "CocoaNewsTextField.h"
 #import "ArticleTableViewController.h"
+#import "YQParse.h"
 
 @interface CocoaNewsTextField()
 
@@ -36,6 +37,26 @@
         self.font = [UIFont systemFontOfSize:15];
     }
     return self;
+}
+
+- (void)addImage:(NSURL *)url
+{
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
+    
+    YQHTTPRequestOperation *requestOperation = [[YQHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    requestOperation.responseSerializer = [YQImageResponseSerializer serializer];
+    [requestOperation setCompletionBlockWithSuccess:^(YQHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Load image successfully.");
+        // self.adImageView = [[UIImageView alloc] initWithImage:responseObject];
+        UIImageView *newImageView = [[UIImageView alloc] initWithImage:responseObject];
+        [self.blocks setObject:newImageView forKey: [NSNumber numberWithInt:self.currentIndex]];
+        self.currentIndex++;
+        
+    } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Image error: %@", error);
+        
+    }];
+    [requestOperation start];
 }
 
 -(void)addText:(NSString *)text

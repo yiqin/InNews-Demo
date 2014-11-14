@@ -49,6 +49,7 @@
 		8DAAADE91A1601640003573B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADE81A1601640003573B /* UIKit.framework */; };
 		8DAAADEB1A1601690003573B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADEA1A1601690003573B /* Foundation.framework */; };
 		8DAAADED1A16016F0003573B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADEC1A16016F0003573B /* CoreGraphics.framework */; };
+		8DAAADF31A161B7E0003573B /* ArticleBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADF21A161B7E0003573B /* ArticleBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,8 @@
 		8DAAADE81A1601640003573B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8DAAADEA1A1601690003573B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DAAADEC1A16016F0003573B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8DAAADF11A161B7E0003573B /* ArticleBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleBlock.h; sourceTree = "<group>"; };
+		8DAAADF21A161B7E0003573B /* ArticleBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +244,8 @@
 				8DAAADC11A1582920003573B /* ArticleTableViewController.m */,
 				8DAAADD01A15CF750003573B /* Ad.h */,
 				8DAAADD11A15CF750003573B /* Ad.m */,
+				8DAAADF11A161B7E0003573B /* ArticleBlock.h */,
+				8DAAADF21A161B7E0003573B /* ArticleBlock.m */,
 				8DAAADC31A1586730003573B /* ArticleBlockTableViewCell.h */,
 				8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */,
 				8DAAADC91A15A2760003573B /* AdTableViewCell.h */,
@@ -436,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DAAADB21A156AE20003573B /* YQParseImgaeView.m in Sources */,
+				8DAAADF31A161B7E0003573B /* ArticleBlock.m in Sources */,
 				8DAAADAB1A156AE20003573B /* YQSecurityPolicy.m in Sources */,
 				8DAAADB51A156AE20003573B /* YQParseRequestOperationManager.m in Sources */,
 				8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */,

@@ -246,6 +246,8 @@
         
     }
     else {
+        int blockIndex = [self getBlockIndex:indexPath.row];
+        
         ArticleBlockTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articleCellIdentifier];
         if (cell == nil) {
             cell = [[ArticleBlockTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:articleCellIdentifier];
@@ -253,11 +255,10 @@
         }
         // Configure the cell...
         
-        int blockIndex = [self getBlockIndex:indexPath.row];
-        
         NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
         [cell loadCellWithText:tempText];
         return cell;
+        
     }
 }
 

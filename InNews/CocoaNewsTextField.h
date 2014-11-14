@@ -13,6 +13,9 @@
 @property(strong, nonatomic) UIFont *font;
 @property(strong, nonatomic) NSString* text;
 
+
+- (void)addImage:(NSURL *)url;
+
 - (void)addText:(NSString *)text;
 - (void)setFont:(UIFont *)font;
 

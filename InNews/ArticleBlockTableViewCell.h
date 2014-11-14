@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArticleBlock.h"
 
 @interface ArticleBlockTableViewCell : UITableViewCell
 
-- (void) loadCellWithText:(NSString *)text;
+@property (strong, nonatomic) UIImageView *articleImageView;
++ (CGFloat)cellHeight;
+- (void)loadCell:(UIImageView *) imageView;
 
+
+- (void) loadCellWithText:(NSString *)text;
 + (CGFloat)cellHeightWithText:(NSString *)text;
+
+
+
+
+
 
 @end
