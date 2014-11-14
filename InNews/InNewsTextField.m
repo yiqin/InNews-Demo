@@ -7,27 +7,40 @@
 //
 
 #import "InNewsTextField.h"
+#import "ArticleTableViewController.h"
 
 @interface InNewsTextField()
 
-@property(strong, nonatomic) UITableViewController *articleViewController;
+@property(strong, nonatomic) ArticleTableViewController *articleTVC;
+@property(strong, nonatomic) NSMutableDictionary *blocks;
+@property(nonatomic) int currentIndex;
 
 @end
 
 
 @implementation InNewsTextField
 
+
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.currentIndex = 0;
+        
         self.backgroundColor = [UIColor redColor];
-        self.articleViewController = [[UITableViewController alloc] initWithNibName:nil bundle:nil];
+        self.articleTVC = [[ArticleTableViewController alloc] initWithNibName:nil bundle:nil];
+        self.articleTVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+        [self addSubview:self.articleTVC.view];
     }
     return self;
 }
 
-
+-(void)addText:(NSString *)text
+{
+    
+    [self.blocks setObject:text forKey: [NSNumber numberWithInt: self.currentIndex]];
+    self.articleTVC.blocks = self.blocks;    
+}
 
 
 

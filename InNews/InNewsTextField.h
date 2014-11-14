@@ -10,4 +10,6 @@
 
 @interface InNewsTextField : UIView
 
+- (void)addText:(NSString *)text;
+
 @end

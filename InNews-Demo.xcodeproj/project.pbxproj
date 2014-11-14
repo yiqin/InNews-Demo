@@ -34,6 +34,9 @@
 		8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADB81A15768C0003573B /* SecondViewController.m */; };
 		8DAAADBC1A1578720003573B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADBB1A1578720003573B /* iAd.framework */; };
 		8DAAADBF1A157E3A0003573B /* InNewsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADBE1A157E3A0003573B /* InNewsTextField.m */; };
+		8DAAADC21A1582920003573B /* ArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC11A1582920003573B /* ArticleTableViewController.m */; };
+		8DAAADC51A1586730003573B /* ArticleBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */; };
+		8DAAADC81A1591190003573B /* InNewsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC71A1591190003573B /* InNewsLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,12 @@
 		8DAAADBB1A1578720003573B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8DAAADBD1A157E3A0003573B /* InNewsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNewsTextField.h; sourceTree = "<group>"; };
 		8DAAADBE1A157E3A0003573B /* InNewsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNewsTextField.m; sourceTree = "<group>"; };
+		8DAAADC01A1582920003573B /* ArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewController.h; sourceTree = "<group>"; };
+		8DAAADC11A1582920003573B /* ArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewController.m; sourceTree = "<group>"; };
+		8DAAADC31A1586730003573B /* ArticleBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleBlockTableViewCell.h; sourceTree = "<group>"; };
+		8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleBlockTableViewCell.m; sourceTree = "<group>"; };
+		8DAAADC61A1591190003573B /* InNewsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNewsLabel.h; sourceTree = "<group>"; };
+		8DAAADC71A1591190003573B /* InNewsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNewsLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +201,12 @@
 				8DAAAD811A1569DC0003573B /* InNews.m */,
 				8DAAADBD1A157E3A0003573B /* InNewsTextField.h */,
 				8DAAADBE1A157E3A0003573B /* InNewsTextField.m */,
+				8DAAADC01A1582920003573B /* ArticleTableViewController.h */,
+				8DAAADC11A1582920003573B /* ArticleTableViewController.m */,
+				8DAAADC31A1586730003573B /* ArticleBlockTableViewCell.h */,
+				8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */,
+				8DAAADC61A1591190003573B /* InNewsLabel.h */,
+				8DAAADC71A1591190003573B /* InNewsLabel.m */,
 				8DAAAD831A156AE20003573B /* YQParse */,
 			);
 			path = InNews;
@@ -362,6 +377,7 @@
 				8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */,
 				8DAAAD621A1569890003573B /* ViewController.m in Sources */,
 				8DAAADAF1A156AE20003573B /* YQURLSessionManager.m in Sources */,
+				8DAAADC51A1586730003573B /* ArticleBlockTableViewCell.m in Sources */,
 				8DAAADB31A156AE20003573B /* YQParseObject.m in Sources */,
 				8DAAADAA1A156AE20003573B /* YQNetworkReachabilityManager.m in Sources */,
 				8DAAADA71A156AE20003573B /* YQHTTPRequestOperation.m in Sources */,
@@ -371,9 +387,11 @@
 				8DAAADB01A156AE20003573B /* YQParse.m in Sources */,
 				8DAAADAC1A156AE20003573B /* YQURLConnectionOperation.m in Sources */,
 				8DAAAD5F1A1569890003573B /* AppDelegate.m in Sources */,
+				8DAAADC21A1582920003573B /* ArticleTableViewController.m in Sources */,
 				8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */,
 				8DAAAD5C1A1569890003573B /* main.m in Sources */,
 				8DAAADBF1A157E3A0003573B /* InNewsTextField.m in Sources */,
+				8DAAADC81A1591190003573B /* InNewsLabel.m in Sources */,
 				8DAAADAD1A156AE20003573B /* YQURLRequestSerialization.m in Sources */,
 				8DAAAD821A1569DC0003573B /* InNews.m in Sources */,
 			);
