@@ -245,7 +245,7 @@
 				8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */,
 				8DAAADC91A15A2760003573B /* AdTableViewCell.h */,
 				8DAAADCA1A15A2760003573B /* AdTableViewCell.m */,
-				8DAAADD31A1600830003573B /* SWTableViewCell */,
+				8DAAADD31A1600830003573B /* YQTableViewCell */,
 				8DAAADC61A1591190003573B /* InNewsLabel.h */,
 				8DAAADC71A1591190003573B /* InNewsLabel.m */,
 				8DAAAD831A156AE20003573B /* YQParse */,
@@ -314,7 +314,7 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		8DAAADD31A1600830003573B /* SWTableViewCell */ = {
+		8DAAADD31A1600830003573B /* YQTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				8DAAADD41A1600830003573B /* NSMutableArray+SWUtilityButtons.h */,
@@ -330,7 +330,7 @@
 				8DAAADDE1A1600830003573B /* SWUtilityButtonView.h */,
 				8DAAADDF1A1600830003573B /* SWUtilityButtonView.m */,
 			);
-			name = SWTableViewCell;
+			name = YQTableViewCell;
 			path = PodFiles;
 			sourceTree = "<group>";
 		};

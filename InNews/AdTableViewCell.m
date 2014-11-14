@@ -26,10 +26,10 @@
     // self.adImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
     // [self.adImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     
-    self.adImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 8, 300-10, 140)];
+    self.adImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, 300-10, 148)];
     [self.adImageView setContentMode:UIViewContentModeScaleAspectFill];
     
-    [self addSubview:self.adImageView];
+    [self.cellScrollView addSubview:self.adImageView];
 }
 
 - (void)loadCell:(Ad *) ad
@@ -51,7 +51,7 @@
 
 + (CGFloat)cellHeight
 {
-    return 140+8+10;
+    return 140+8;
 }
 
 @end

@@ -15,5 +15,6 @@
 
 @property (nonatomic, strong) NSURL *imageURL;
 @property (nonatomic, strong) UIImageView *adImageView;
+@property (nonatomic, strong) NSString *title;
 
 @end

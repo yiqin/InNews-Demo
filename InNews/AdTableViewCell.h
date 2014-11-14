@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Ad.h"
+#import "SWTableViewCell.h"
 
-@interface AdTableViewCell : UITableViewCell
+@interface AdTableViewCell : SWTableViewCell
 
 @property (strong, nonatomic) UIImageView *adImageView;
 

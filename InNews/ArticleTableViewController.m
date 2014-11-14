@@ -43,7 +43,6 @@
         self.tableView.separatorColor = [UIColor clearColor];
         
         
-        
         self.blocks = [[NSMutableDictionary alloc] init];
         self.wholeArticle = [[NSMutableString alloc] init];
         self.adPosition = 2;
@@ -154,10 +153,22 @@
     NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
     
     [self.tableView beginUpdates];
+    
+    [YQParseAnalytics trackEvent:@"Impressions" dimensions:@{@"Advertiser":self.ad.title}];
+    
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationTop];
     [self.tableView endUpdates];
     
 }
+
+- (void)deleteAdFromTableView
+{
+    self.hasAd = NO;
+    NSIndexPath *path1 = [NSIndexPath indexPathForRow:self.adPosition inSection:0]; //ALSO TRIED WITH indexPathRow:0
+    NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
+    [self.tableView deleteRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationLeft];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -213,23 +224,25 @@
     
     if ((indexPath.row == self.adPosition) && (self.hasAd == YES)) {
         
-        SWTableViewCell *cell = (SWTableViewCell *)[tableView dequeueReusableCellWithIdentifier:adCellIdentifier];
+        AdTableViewCell *cell = (AdTableViewCell *)[tableView dequeueReusableCellWithIdentifier:adCellIdentifier];
         
         if (cell == nil) {
             
-            cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:adCellIdentifier];
+            cell = [[AdTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:adCellIdentifier];
             
             cell.leftUtilityButtons = [self leftButtons];
             cell.rightUtilityButtons = [self rightButtons];
             cell.delegate = self;
         }
         
+        
         cell.textLabel.backgroundColor = [UIColor whiteColor];
         cell.detailTextLabel.backgroundColor = [UIColor whiteColor];
         cell.detailTextLabel.text = @"Some detail text";
         
-        return cell;
         
+        [cell loadCell:self.ad];
+        return cell;
         
     }
     else {
@@ -271,8 +284,8 @@
 {
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
-                                                title:@"More"];
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                title:@""];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
                                                 title:@"Delete"];
@@ -284,6 +297,7 @@
 {
     NSMutableArray *leftUtilityButtons = [NSMutableArray new];
     
+    /*
     [leftUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:0.07 green:0.75f blue:0.16f alpha:1.0]
                                                 icon:[UIImage imageNamed:@"check.png"]];
@@ -296,7 +310,7 @@
     [leftUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:0.55f green:0.27f blue:0.07f alpha:1.0]
                                                 icon:[UIImage imageNamed:@"list.png"]];
-    
+    */
     return leftUtilityButtons;
 }
 
@@ -313,6 +327,7 @@
             break;
         case 2:
             NSLog(@"right utility buttons open");
+            [self deleteAdFromTableView];
             break;
         default:
             break;
@@ -356,7 +371,9 @@
             NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
             
             // [_testArray[cellIndexPath.section] removeObjectAtIndex:cellIndexPath.row];
+            self.hasAd = NO;
             [self.tableView deleteRowsAtIndexPaths:@[cellIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
+            
             break;
         }
         default:

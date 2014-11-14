@@ -21,6 +21,8 @@
         self.updatedAt = parseObject.updatedAt;
         self.responseJSON = parseObject.responseJSON;
         
+        self.title = [self.responseJSON objectForKey:@"title"];
+        
         NSDictionary *imageFileDictionary = [self.responseJSON objectForKey:@"image"];
         
         self.imageURL = [[NSURL alloc] initWithString:[imageFileDictionary objectForKey:@"url"]];

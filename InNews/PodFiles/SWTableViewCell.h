@@ -49,4 +49,7 @@ typedef NS_ENUM(NSInteger, SWCellState)
 
 - (BOOL)isUtilityButtonsHidden;
 
+@property (nonatomic, weak) UITableView *containingTableView;
+@property (nonatomic, strong) UIScrollView *cellScrollView;
+
 @end
