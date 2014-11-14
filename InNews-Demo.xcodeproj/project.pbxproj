@@ -33,6 +33,7 @@
 		8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA61A156AE20003573B /* YQParseUser.m */; };
 		8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADB81A15768C0003573B /* SecondViewController.m */; };
 		8DAAADBC1A1578720003573B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADBB1A1578720003573B /* iAd.framework */; };
+		8DAAADBF1A157E3A0003573B /* InNewsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADBE1A157E3A0003573B /* InNewsTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		8DAAADB71A15768C0003573B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		8DAAADB81A15768C0003573B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8DAAADBB1A1578720003573B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		8DAAADBD1A157E3A0003573B /* InNewsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNewsTextField.h; sourceTree = "<group>"; };
+		8DAAADBE1A157E3A0003573B /* InNewsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNewsTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 			children = (
 				8DAAAD801A1569DC0003573B /* InNews.h */,
 				8DAAAD811A1569DC0003573B /* InNews.m */,
+				8DAAADBD1A157E3A0003573B /* InNewsTextField.h */,
+				8DAAADBE1A157E3A0003573B /* InNewsTextField.m */,
 				8DAAAD831A156AE20003573B /* YQParse */,
 			);
 			path = InNews;
@@ -368,6 +373,7 @@
 				8DAAAD5F1A1569890003573B /* AppDelegate.m in Sources */,
 				8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */,
 				8DAAAD5C1A1569890003573B /* main.m in Sources */,
+				8DAAADBF1A157E3A0003573B /* InNewsTextField.m in Sources */,
 				8DAAADAD1A156AE20003573B /* YQURLRequestSerialization.m in Sources */,
 				8DAAAD821A1569DC0003573B /* InNews.m in Sources */,
 			);

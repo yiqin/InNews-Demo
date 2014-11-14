@@ -8,6 +8,8 @@
 
 #import "SecondViewController.h"
 
+#import "InNewsTextField.h"
+
 @interface SecondViewController ()
 
 @end
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    InNewsTextField *newTextField = [[InNewsTextField alloc] initWithFrame:CGRectMake(10, 60, 300, 450)];
+    
+    
+    
+    [self.view addSubview:newTextField];
 }
 
 - (void)didReceiveMemoryWarning {

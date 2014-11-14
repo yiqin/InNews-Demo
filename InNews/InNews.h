@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "InNewsTextField.h"
+
 @interface InNews : NSObject
 
 /*!
