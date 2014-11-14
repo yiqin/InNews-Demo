@@ -30,13 +30,13 @@
 
 - (void)setSubviews
 {
-    self.paragraphLabel = [[InNewsLabel alloc] initWithFrame:CGRectMake(4, 8, 300-8, 10)];
+    self.paragraphLabel = [[InNewsLabel alloc] initWithFrame:CGRectMake(5, 8, 300-10, 10)];
     [self addSubview:self.paragraphLabel];
 }
 
 - (void)loadCellWithText:(NSString *)text
 {
-    [self.paragraphLabel setFrame:CGRectMake(4, 8, 300-8, 10) font:[UIFont systemFontOfSize:16] text:text];
+    [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[UIFont systemFontOfSize:16] text:text];
 }
 
 - (void)awakeFromNib {
@@ -53,7 +53,7 @@
 {
     InNewsLabel *inNewsLabel = [[InNewsLabel alloc] init];
     
-    [inNewsLabel setFrame:CGRectMake(4, 8, 300-8, 10) font:[UIFont systemFontOfSize:16] text:text];
+    [inNewsLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[UIFont systemFontOfSize:16] text:text];
     
     // [inNewsLabel updateFrameWithText:text];
     
