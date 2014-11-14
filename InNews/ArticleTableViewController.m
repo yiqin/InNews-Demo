@@ -11,8 +11,6 @@
 
 @interface ArticleTableViewController ()
 
-@property(nonatomic) int currentIndex;
-
 @end
 
 @implementation ArticleTableViewController
@@ -21,8 +19,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.view.backgroundColor = [UIColor yellowColor];
-        self.currentIndex = 0;
+        // self.view.backgroundColor = [UIColor yellowColor];
+        self.tableView.separatorColor = [UIColor clearColor];
+        
+        self.blocks = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -46,9 +46,11 @@
 - (void)setBlocks:(NSMutableDictionary *)blocks
 {
     _blocks = blocks;
-    self.currentIndex = 0;
-    [self.tableView reloadData];
+    
+    // No need to reload.
+    // [self.tableView reloadData];
 }
+
 
 #pragma mark - Table view data source
 
@@ -64,7 +66,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:self.currentIndex]];
+    NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
     return [ArticleBlockTableViewCell cellHeightWithText:tempText];
 }
 
@@ -72,12 +74,12 @@
 {
     NSString static *articleCellIdentifier = @"ArticleCellIdentifier";
     ArticleBlockTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articleCellIdentifier];
-    if (!cell) {
+    if (cell == nil) {
         cell = [[ArticleBlockTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:articleCellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     // Configure the cell...
-    NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:self.currentIndex]];
-    self.currentIndex = self.currentIndex+1;
+    NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
     [cell loadCellWithText:tempText];
     
     return cell;

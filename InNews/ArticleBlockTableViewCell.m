@@ -22,6 +22,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        // self.backgroundColor = [UIColor redColor];
         [self setSubviews];
     }
     return self;
@@ -29,14 +30,14 @@
 
 - (void)setSubviews
 {
-    self.paragraphLabel = [[InNewsLabel alloc] initWithFrame:CGRectMake(0, 0, 320, 10)];
+    self.paragraphLabel = [[InNewsLabel alloc] initWithFrame:CGRectMake(4, 8, 300-8, 10)];
+    [self addSubview:self.paragraphLabel];
 }
 
 - (void)loadCellWithText:(NSString *)text
 {
-    [self.paragraphLabel updateFrameWithText:text];
+    [self.paragraphLabel setFrame:CGRectMake(4, 8, 300-8, 10) font:[UIFont systemFontOfSize:16] text:text];
 }
-
 
 - (void)awakeFromNib {
     // Initialization code
@@ -50,10 +51,15 @@
 
 + (CGFloat)cellHeightWithText:(NSString *)text
 {
-    InNewsLabel *inNewsLabel = [[InNewsLabel alloc] initWithFrame:CGRectMake(0, 0, 320, 10)];
-    [inNewsLabel updateFrameWithText:text];
+    InNewsLabel *inNewsLabel = [[InNewsLabel alloc] init];
     
-    return CGRectGetHeight(inNewsLabel.frame);
+    [inNewsLabel setFrame:CGRectMake(4, 8, 300-8, 10) font:[UIFont systemFontOfSize:16] text:text];
+    
+    // [inNewsLabel updateFrameWithText:text];
+    
+    NSLog(@"%f", CGRectGetHeight(inNewsLabel.frame));
+    
+    return CGRectGetHeight(inNewsLabel.frame)+20;
 }
 
 @end

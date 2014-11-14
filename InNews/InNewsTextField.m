@@ -26,6 +26,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.currentIndex = 0;
+        self.blocks = [[NSMutableDictionary alloc] init];
         
         self.backgroundColor = [UIColor redColor];
         self.articleTVC = [[ArticleTableViewController alloc] initWithNibName:nil bundle:nil];
@@ -38,8 +39,12 @@
 -(void)addText:(NSString *)text
 {
     
-    [self.blocks setObject:text forKey: [NSNumber numberWithInt: self.currentIndex]];
-    self.articleTVC.blocks = self.blocks;    
+    [self.blocks setObject:text forKey: [NSNumber numberWithInt:self.currentIndex]];
+    self.currentIndex++;
+    NSLog(@"%@", self.blocks);
+    
+    
+    self.articleTVC.blocks = self.blocks;
 }
 
 
