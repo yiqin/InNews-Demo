@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "InNewsLabel.h"
+#import "CocoaNewsLabel.h"
 
-@implementation InNewsLabel
+@implementation CocoaNewsLabel
 
 - (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text
 {

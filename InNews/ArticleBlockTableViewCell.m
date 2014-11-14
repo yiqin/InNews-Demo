@@ -7,12 +7,12 @@
 //
 
 #import "ArticleBlockTableViewCell.h"
-#import "InNewsTextField.h"
-#import "InNewsLabel.h"
+#import "CocoaNewsTextField.h"
+#import "CocoaNewsLabel.h"
 
 @interface ArticleBlockTableViewCell()
 
-@property(strong, nonatomic) InNewsLabel *paragraphLabel;
+@property(strong, nonatomic) CocoaNewsLabel *paragraphLabel;
 
 @end
 
@@ -31,13 +31,13 @@
 
 - (void)setSubviews
 {
-    self.paragraphLabel = [[InNewsLabel alloc] initWithFrame:CGRectMake(5, 8, 300-10, 10)];
+    self.paragraphLabel = [[CocoaNewsLabel alloc] initWithFrame:CGRectMake(5, 8, 300-10, 10)];
     [self addSubview:self.paragraphLabel];
 }
 
 - (void)loadCellWithText:(NSString *)text
 {
-    [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[InNewsTextField getFont] text:text];
+    [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextField getFont] text:text];
 }
 
 - (void)awakeFromNib {
@@ -52,15 +52,15 @@
 
 + (CGFloat)cellHeightWithText:(NSString *)text
 {
-    InNewsLabel *inNewsLabel = [[InNewsLabel alloc] init];
+    CocoaNewsLabel *cocoaNewsLabel = [[CocoaNewsLabel alloc] init];
     
-    [inNewsLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[InNewsTextField getFont] text:text];
+    [cocoaNewsLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextField getFont] text:text];
     
     // [inNewsLabel updateFrameWithText:text];
     
-    NSLog(@"%f", CGRectGetHeight(inNewsLabel.frame));
+    NSLog(@"%f", CGRectGetHeight(cocoaNewsLabel.frame));
     
-    return CGRectGetHeight(inNewsLabel.frame)+20;
+    return CGRectGetHeight(cocoaNewsLabel.frame)+20;
 }
 
 @end

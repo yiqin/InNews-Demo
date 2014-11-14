@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "InNewsTextField.h"
+#import "CocoaNewsTextField.h"
 
-@interface InNews : NSObject
+@interface CocoaNews : NSObject
 
 /*!
  Initialize Innews. Note: actually only apiKey is used to find YQApp on Parse.com. applicationId is needed later.

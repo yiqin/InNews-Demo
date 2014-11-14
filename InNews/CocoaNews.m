@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "InNews.h"
+#import "CocoaNews.h"
 #import "YQParse.h"
 
-@interface InNews ()
+@interface CocoaNews ()
 
 @property(nonatomic, strong) NSString *applicationId;
 @property(nonatomic, strong) NSString *apiKey;
@@ -17,11 +17,11 @@
 @end
 
 
-@implementation InNews
+@implementation CocoaNews
 
 + (instancetype)sharedManager
 {
-    static InNews *sharedManager = nil;
+    static CocoaNews *sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[self alloc] init];
@@ -49,20 +49,20 @@
     NSLog(@"****** Update date: 11/13/2015 ******");
     NSLog(@"*************************************");
     
-    InNews *shared = [InNews sharedManager];
+    CocoaNews *shared = [CocoaNews sharedManager];
     shared.applicationId = applicationId;
     shared.apiKey = apiKey;
 }
 
 + (NSString*)getApplicationId
 {
-    InNews *shared = [InNews sharedManager];
+    CocoaNews *shared = [CocoaNews sharedManager];
     return shared.applicationId;
 }
 
 + (NSString*)getApiKey
 {
-    InNews *shared = [InNews sharedManager];
+    CocoaNews *shared = [CocoaNews sharedManager];
     return shared.apiKey;
 }
 

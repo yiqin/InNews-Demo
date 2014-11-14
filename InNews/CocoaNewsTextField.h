@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InNewsTextField : UIView
+@interface CocoaNewsTextField : UIView
 
 @property(strong, nonatomic) UIFont *font;
 @property(strong, nonatomic) NSString* text;

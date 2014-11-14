@@ -14,7 +14,7 @@
 		8DAAAD671A1569890003573B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DAAAD661A1569890003573B /* Images.xcassets */; };
 		8DAAAD6A1A1569890003573B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAAAD681A1569890003573B /* LaunchScreen.xib */; };
 		8DAAAD761A1569890003573B /* InNews_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD751A1569890003573B /* InNews_DemoTests.m */; };
-		8DAAAD821A1569DC0003573B /* InNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD811A1569DC0003573B /* InNews.m */; };
+		8DAAAD821A1569DC0003573B /* CocoaNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD811A1569DC0003573B /* CocoaNews.m */; };
 		8DAAADA71A156AE20003573B /* YQHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD861A156AE20003573B /* YQHTTPRequestOperation.m */; };
 		8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD881A156AE20003573B /* YQHTTPRequestOperationManager.m */; };
 		8DAAADA91A156AE20003573B /* YQHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAAD8A1A156AE20003573B /* YQHTTPSessionManager.m */; };
@@ -33,10 +33,10 @@
 		8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA61A156AE20003573B /* YQParseUser.m */; };
 		8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADB81A15768C0003573B /* SecondViewController.m */; };
 		8DAAADBC1A1578720003573B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADBB1A1578720003573B /* iAd.framework */; };
-		8DAAADBF1A157E3A0003573B /* InNewsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADBE1A157E3A0003573B /* InNewsTextField.m */; };
+		8DAAADBF1A157E3A0003573B /* CocoaNewsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADBE1A157E3A0003573B /* CocoaNewsTextField.m */; };
 		8DAAADC21A1582920003573B /* ArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC11A1582920003573B /* ArticleTableViewController.m */; };
 		8DAAADC51A1586730003573B /* ArticleBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */; };
-		8DAAADC81A1591190003573B /* InNewsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC71A1591190003573B /* InNewsLabel.m */; };
+		8DAAADC81A1591190003573B /* CocoaNewsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC71A1591190003573B /* CocoaNewsLabel.m */; };
 		8DAAADCB1A15A2760003573B /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADCA1A15A2760003573B /* AdTableViewCell.m */; };
 		8DAAADD21A15CF750003573B /* Ad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADD11A15CF750003573B /* Ad.m */; };
 		8DAAADE01A1600830003573B /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADD51A1600830003573B /* NSMutableArray+SWUtilityButtons.m */; };
@@ -75,8 +75,8 @@
 		8DAAAD6F1A1569890003573B /* InNews-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InNews-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAAAD741A1569890003573B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DAAAD751A1569890003573B /* InNews_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InNews_DemoTests.m; sourceTree = "<group>"; };
-		8DAAAD801A1569DC0003573B /* InNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNews.h; sourceTree = "<group>"; };
-		8DAAAD811A1569DC0003573B /* InNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNews.m; sourceTree = "<group>"; };
+		8DAAAD801A1569DC0003573B /* CocoaNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaNews.h; sourceTree = "<group>"; };
+		8DAAAD811A1569DC0003573B /* CocoaNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaNews.m; sourceTree = "<group>"; };
 		8DAAAD851A156AE20003573B /* YQHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperation.h; sourceTree = "<group>"; };
 		8DAAAD861A156AE20003573B /* YQHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPRequestOperation.m; sourceTree = "<group>"; };
 		8DAAAD871A156AE20003573B /* YQHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -114,14 +114,14 @@
 		8DAAADB71A15768C0003573B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		8DAAADB81A15768C0003573B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8DAAADBB1A1578720003573B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		8DAAADBD1A157E3A0003573B /* InNewsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNewsTextField.h; sourceTree = "<group>"; };
-		8DAAADBE1A157E3A0003573B /* InNewsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNewsTextField.m; sourceTree = "<group>"; };
+		8DAAADBD1A157E3A0003573B /* CocoaNewsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaNewsTextField.h; sourceTree = "<group>"; };
+		8DAAADBE1A157E3A0003573B /* CocoaNewsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaNewsTextField.m; sourceTree = "<group>"; };
 		8DAAADC01A1582920003573B /* ArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewController.h; sourceTree = "<group>"; };
 		8DAAADC11A1582920003573B /* ArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewController.m; sourceTree = "<group>"; };
 		8DAAADC31A1586730003573B /* ArticleBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleBlockTableViewCell.h; sourceTree = "<group>"; };
 		8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleBlockTableViewCell.m; sourceTree = "<group>"; };
-		8DAAADC61A1591190003573B /* InNewsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InNewsLabel.h; sourceTree = "<group>"; };
-		8DAAADC71A1591190003573B /* InNewsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InNewsLabel.m; sourceTree = "<group>"; };
+		8DAAADC61A1591190003573B /* CocoaNewsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaNewsLabel.h; sourceTree = "<group>"; };
+		8DAAADC71A1591190003573B /* CocoaNewsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaNewsLabel.m; sourceTree = "<group>"; };
 		8DAAADC91A15A2760003573B /* AdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
 		8DAAADCA1A15A2760003573B /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 		8DAAADD01A15CF750003573B /* Ad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad.h; sourceTree = "<group>"; };
@@ -233,10 +233,10 @@
 		8DAAAD7F1A1569A30003573B /* CocoaNews */ = {
 			isa = PBXGroup;
 			children = (
-				8DAAAD801A1569DC0003573B /* InNews.h */,
-				8DAAAD811A1569DC0003573B /* InNews.m */,
-				8DAAADBD1A157E3A0003573B /* InNewsTextField.h */,
-				8DAAADBE1A157E3A0003573B /* InNewsTextField.m */,
+				8DAAAD801A1569DC0003573B /* CocoaNews.h */,
+				8DAAAD811A1569DC0003573B /* CocoaNews.m */,
+				8DAAADBD1A157E3A0003573B /* CocoaNewsTextField.h */,
+				8DAAADBE1A157E3A0003573B /* CocoaNewsTextField.m */,
 				8DAAADC01A1582920003573B /* ArticleTableViewController.h */,
 				8DAAADC11A1582920003573B /* ArticleTableViewController.m */,
 				8DAAADD01A15CF750003573B /* Ad.h */,
@@ -246,8 +246,8 @@
 				8DAAADC91A15A2760003573B /* AdTableViewCell.h */,
 				8DAAADCA1A15A2760003573B /* AdTableViewCell.m */,
 				8DAAADD31A1600830003573B /* YQTableViewCell */,
-				8DAAADC61A1591190003573B /* InNewsLabel.h */,
-				8DAAADC71A1591190003573B /* InNewsLabel.m */,
+				8DAAADC61A1591190003573B /* CocoaNewsLabel.h */,
+				8DAAADC71A1591190003573B /* CocoaNewsLabel.m */,
 				8DAAAD831A156AE20003573B /* YQParse */,
 			);
 			name = CocoaNews;
@@ -463,11 +463,11 @@
 				8DAAADE21A1600830003573B /* SWLongPressGestureRecognizer.m in Sources */,
 				8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */,
 				8DAAAD5C1A1569890003573B /* main.m in Sources */,
-				8DAAADBF1A157E3A0003573B /* InNewsTextField.m in Sources */,
-				8DAAADC81A1591190003573B /* InNewsLabel.m in Sources */,
+				8DAAADBF1A157E3A0003573B /* CocoaNewsTextField.m in Sources */,
+				8DAAADC81A1591190003573B /* CocoaNewsLabel.m in Sources */,
 				8DAAADAD1A156AE20003573B /* YQURLRequestSerialization.m in Sources */,
 				8DAAADE51A1600830003573B /* SWUtilityButtonView.m in Sources */,
-				8DAAAD821A1569DC0003573B /* InNews.m in Sources */,
+				8DAAAD821A1569DC0003573B /* CocoaNews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

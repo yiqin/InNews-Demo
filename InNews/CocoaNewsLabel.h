@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InNewsLabel : UILabel
+@interface CocoaNewsLabel : UILabel
 
 - (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text;
 - (void)setFrame:(CGRect)frame font:(UIFont *)font text:(NSString *)text;
