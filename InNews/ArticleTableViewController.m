@@ -79,7 +79,10 @@
         NSLog(@"%@", sortKeys);
         
         for (int i=0; i<[sortKeys count]; i++) {
-            [self.wholeArticle appendString: [self.blocks objectForKey:[sortKeys objectAtIndex:i]]];
+            ArticleBlock *block = [self.blocks objectForKey:[sortKeys objectAtIndex:i]];
+            if (block.isText) {
+                [self.wholeArticle appendString: block.text];
+            }
         }
         NSLog(@"%@", self.wholeArticle);
         
@@ -210,8 +213,9 @@
     }
     else {
         int blockIndex = [self getBlockIndex:indexPath.row];
-        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
-        return [ArticleBlockTableViewCell cellHeightWithText:tempText];
+        ArticleBlock *temp = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
+        
+        return [ArticleBlockTableViewCell cellHeightWithArticleBlock:temp];
     }
 }
 
@@ -255,8 +259,11 @@
         }
         // Configure the cell...
         
-        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
-        [cell loadCellWithText:tempText];
+        ArticleBlock *temp = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
+        
+        
+        [cell loadCellWithArticleBlock:temp];
+        
         return cell;
         
     }

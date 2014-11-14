@@ -11,17 +11,9 @@
 
 @interface ArticleBlockTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) UIImageView *articleImageView;
-+ (CGFloat)cellHeight;
-- (void)loadCell:(UIImageView *) imageView;
 
-
-- (void) loadCellWithText:(NSString *)text;
-+ (CGFloat)cellHeightWithText:(NSString *)text;
-
-
-
-
+- (void) loadCellWithArticleBlock:(ArticleBlock *)articleBlock;
++ (CGFloat)cellHeightWithArticleBlock:(ArticleBlock *)articleBlock;
 
 
 @end

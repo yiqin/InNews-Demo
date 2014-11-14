@@ -8,6 +8,7 @@
 
 #import "CocoaNewsTextField.h"
 #import "ArticleTableViewController.h"
+#import "ArticleBlock.h"
 #import "YQParse.h"
 
 @interface CocoaNewsTextField()
@@ -64,7 +65,9 @@
     NSArray *blockItems = [text componentsSeparatedByString:@"\n\n"];
     
     for (NSString*blockItem in blockItems) {
-        [self.blocks setObject:blockItem forKey: [NSNumber numberWithInt:self.currentIndex]];
+        
+        ArticleBlock *articleBlock = [[ArticleBlock alloc] initWithText:blockItem];
+        [self.blocks setObject:articleBlock forKey: [NSNumber numberWithInt:self.currentIndex]];
         self.currentIndex++;
     }
     // NSLog(@"%@", self.blocks);

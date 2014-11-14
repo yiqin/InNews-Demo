@@ -11,9 +11,12 @@
 
 @interface ArticleBlock : NSObject
 
+- (instancetype)initWithText:(NSString *)text;
+- (instancetype)initWithImage:(UIImage *)articleImage;
+
 @property(nonatomic) BOOL isText;
 @property(strong, nonatomic) NSString* text;
-@property (strong, nonatomic) UIImageView *articleImageView;
+@property (strong, nonatomic) UIImage *articleImage;
 
 
 @end

@@ -14,15 +14,31 @@
 {
     self = [super init];
     if (self) {
-        self.isText = YES;
+        
     }
     return self;
 }
 
-- (void)setArticleImageView:(UIImageView *)articleImageView
+- (instancetype)initWithText:(NSString *)text
 {
-    _articleImageView = articleImageView;
-    self.isText = NO;
+    self = [self init];
+    if (self) {
+        _isText = YES;
+        _text = text;
+        _articleImage = nil;
+    }
+    return self;
+}
+
+- (instancetype)initWithImage:(UIImage *)articleImage
+{
+    self = [self init];
+    if (self) {
+        _isText = NO;
+        _text = nil;
+        _articleImage = articleImage;
+    }
+    return self;
 }
 
 @end

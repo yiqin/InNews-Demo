@@ -13,6 +13,8 @@
 @interface ArticleBlockTableViewCell()
 
 @property(strong, nonatomic) CocoaNewsLabel *paragraphLabel;
+@property (strong, nonatomic) UIImageView *articleImageView;
+
 
 @end
 
@@ -33,6 +35,10 @@
 {
     self.paragraphLabel = [[CocoaNewsLabel alloc] initWithFrame:CGRectMake(5, 8, 300-10, 10)];
     [self addSubview:self.paragraphLabel];
+    
+    self.articleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, 300-10, 148)];
+    [self.articleImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [self addSubview:self.articleImageView];
 }
 
 - (void)loadCellWithText:(NSString *)text
@@ -61,6 +67,30 @@
     NSLog(@"%f", CGRectGetHeight(cocoaNewsLabel.frame));
     
     return CGRectGetHeight(cocoaNewsLabel.frame)+20;
+}
+
+- (void) loadCellWithArticleBlock:(ArticleBlock *)articleBlock
+{
+    if (articleBlock.isText) {
+        
+        
+        [self loadCellWithText:articleBlock.text];
+        
+        
+    }
+    else {
+        
+    }
+}
+
++ (CGFloat)cellHeightWithArticleBlock:(ArticleBlock *)articleBlock
+{
+    if (articleBlock.isText) {
+        return [ArticleBlockTableViewCell cellHeightWithText:articleBlock.text];
+    }
+    else {
+        return 140+8;
+    }
 }
 
 @end
