@@ -114,19 +114,21 @@
  */
 - (void)parseTextAnaltyicsResult:(NSDictionary *) results
 {
-    NSArray *conceptsResults = [results objectForKey:@"hashtags"];
+    NSArray *hashtagsResults = [results objectForKey:@"hashtags"];
     
     YQParseQuery *query = [YQParseQuery queryWithClassName:@"Keywords"];
-    [query whereKey:@"string" equalTo:@"astronauts"];
+    [query whereKey:@"string" containedIn:hashtagsResults];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            for (YQParseObject *object in objects) {
+            if ([objects count]>0) {
+                int r = rand() % [objects count];
+                // Pick the first one now.
+                YQParseObject *object = [objects objectAtIndex:r];
                 NSLog(@"objectId - %@", object.objectId);
                 
                 NSDictionary *belongTo = [object.responseJSON objectForKey:@"belongTo"];
                 NSString *adObjectId = [belongTo objectForKey:@"objectId"];
                 [self loadAdImageWithObjectId:adObjectId];
-                
             }
         }
     }];
@@ -183,7 +185,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == self.adPosition) {
+    if ((indexPath.row == self.adPosition) && (self.hasAd == YES)) {
         return [AdTableViewCell cellHeight];
     }
     else {
@@ -200,7 +202,7 @@
     
     NSLog(@"%i", indexPath.row);
     
-    if (indexPath.row == self.adPosition) {
+    if ((indexPath.row == self.adPosition) && (self.hasAd == YES)) {
         AdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:adCellIdentifier];
         if (cell == nil) {
             cell = [[AdTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:adCellIdentifier];
@@ -230,12 +232,18 @@
 {
     int blockIndex;
     
-    if(currentIndexRow <= self.adPosition){
-        blockIndex = currentIndexRow;
+    if (self.hasAd) {
+        if(currentIndexRow <= self.adPosition){
+            blockIndex = currentIndexRow;
+        }
+        else {
+            blockIndex = currentIndexRow-1;
+        }
     }
     else {
-        blockIndex = currentIndexRow-1;
+        blockIndex = currentIndexRow;
     }
+
     return blockIndex;
 }
 
