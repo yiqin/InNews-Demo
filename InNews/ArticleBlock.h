@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    UIArticleStyleDefault,
+    UIArticleStyleOne,
+} UIArticleStyle;
+
 @interface ArticleBlock : NSObject
 
 - (instancetype)initWithText:(NSString *)text;
@@ -20,5 +25,7 @@
 @property (strong, nonatomic) UIImage *articleImage;
 
 @property (nonatomic) int currentIndex;
+
+@property (nonatomic) UIArticleStyle style;
 
 @end

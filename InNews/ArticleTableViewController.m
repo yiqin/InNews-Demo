@@ -46,7 +46,7 @@
         
         self.blocks = [[NSMutableDictionary alloc] init];
         self.wholeArticle = [[NSMutableString alloc] init];
-        self.adPosition = 2;
+        self.adPosition = 3;
         
         // Change it later.
         self.hasAd = NO;
@@ -241,7 +241,7 @@
     NSString static *articleCellIdentifier = @"ArticleCellIdentifier";
     NSString static *adCellIdentifier = @"AdCellIdentifier";
     
-    NSLog(@"%i", indexPath.row);
+    // NSLog(@"%i", indexPath.row);
     
     if ((indexPath.row == self.adPosition) && (self.hasAd == YES)) {
         

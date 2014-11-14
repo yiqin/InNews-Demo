@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArticleBlock.h"
 
 @interface CocoaNewsTextField : UIView
 
@@ -17,8 +18,11 @@
 - (void)addImage:(NSURL *)url;
 
 - (void)addText:(NSString *)text;
+- (void)addText:(NSString *)text style:(UIArticleStyle) style;
+
 - (void)setFont:(UIFont *)font;
 
 +(UIFont *)getFont;
++(UIFont *)getFontTwo;
 
 @end

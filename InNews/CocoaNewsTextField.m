@@ -56,6 +56,24 @@
     for (NSString*blockItem in blockItems) {
         
         ArticleBlock *articleBlock = [[ArticleBlock alloc] initWithText:blockItem];
+        articleBlock.style = UIArticleStyleDefault;
+        [self.blocks setObject:articleBlock forKey: [NSNumber numberWithInt:self.currentIndex]];
+        articleBlock.currentIndex = self.currentIndex;
+        self.currentIndex++;
+    }
+    // NSLog(@"%@", self.blocks);
+    
+    self.articleTVC.blocks = self.blocks;
+}
+
+- (void)addText:(NSString *)text style:(UIArticleStyle) style
+{
+    NSArray *blockItems = [text componentsSeparatedByString:@"\n\n"];
+    
+    for (NSString*blockItem in blockItems) {
+        
+        ArticleBlock *articleBlock = [[ArticleBlock alloc] initWithText:blockItem];
+        articleBlock.style = style;
         [self.blocks setObject:articleBlock forKey: [NSNumber numberWithInt:self.currentIndex]];
         articleBlock.currentIndex = self.currentIndex;
         self.currentIndex++;
@@ -79,6 +97,11 @@
 +(UIFont *)getFont
 {
     return [UIFont systemFontOfSize:16];
+}
+
++(UIFont *)getFontTwo
+{
+    return [UIFont italicSystemFontOfSize:14.0f];
 }
 
 /*

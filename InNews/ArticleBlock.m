@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         _currentIndex = 0;
+        
     }
     return self;
 }
