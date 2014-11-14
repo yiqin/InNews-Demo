@@ -9,41 +9,41 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "InNews/ArticleTableViewController.m"
-            timestampString = "437629749.675259"
+            filePath = "InNews/Ad.m"
+            timestampString = "437637390.397795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-doTextAnalytics:"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-setImageURL:"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__46-[ArticleTableViewController doTextAnalytics:]_block_invoke"
+                  symbolName = "__18-[Ad setImageURL:]_block_invoke"
                   moduleName = "InNews-Demo"
-                  urlString = "file:///Users/yiqin/Desktop/InNews-Demo/InNews/ArticleTableViewController.m"
-                  timestampString = "437630077.208928"
+                  urlString = "file:///Users/yiqin/Desktop/InNews-Demo/InNews/Ad.m"
+                  timestampString = "437637407.949488"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "76">
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "204">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__46-[ArticleTableViewController doTextAnalytics:]_block_invoke_2"
+                  symbolName = "__18-[Ad setImageURL:]_block_invoke48"
                   moduleName = "InNews-Demo"
-                  urlString = "file:///Users/yiqin/Desktop/InNews-Demo/InNews/ArticleTableViewController.m"
-                  timestampString = "437630077.209155"
+                  urlString = "file:///Users/yiqin/Desktop/InNews-Demo/InNews/Ad.m"
+                  timestampString = "437637407.949674"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
                   offsetFromSymbolStart = "58">
                </Location>
             </Locations>

@@ -14,22 +14,36 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [UIColor lightGrayColor];
+        // self.backgroundColor = [UIColor lightGrayColor];
+        [self setSubviews];
         
-        self.adImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
-        [self.adImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-        [self.adImageView setContentMode:UIViewContentModeScaleAspectFit];
-        
-        [self addSubview:self.adImageView];
     }
     return self;
 }
 
-- (void)awakeFromNib {
+- (void)setSubviews
+{
+    // self.adImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
+    // [self.adImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+    
+    self.adImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 8, 300-10, 140)];
+    [self.adImageView setContentMode:UIViewContentModeScaleAspectFill];
+    
+    [self addSubview:self.adImageView];
+}
+
+- (void)loadCell
+{
+    self.adImageView.image = [UIImage imageNamed:@"testAd1.png"];
+}
+
+- (void)awakeFromNib
+{
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
@@ -37,7 +51,7 @@
 
 + (CGFloat)cellHeight
 {
-    return 140;
+    return 140+8+10;
 }
 
 @end

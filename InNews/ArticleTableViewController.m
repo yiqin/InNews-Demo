@@ -11,11 +11,19 @@
 #import "AdTableViewCell.h"
 
 #import "YQNetworking.h"
+#import "YQParse.h"
+
+#import "Ad.h"
 
 @interface ArticleTableViewController ()
 
 @property(nonatomic) BOOL hasAd;
 @property(nonatomic) int adPosition;
+
+
+@property(nonatomic, strong) Ad *ad;
+
+
 @property(strong, nonatomic) NSMutableString *wholeArticle;
 
 @property(nonatomic) BOOL firstTimeLoad;
@@ -47,9 +55,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -57,6 +62,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+// viewDidAppear didn't work. So I put it here.
 - (void)viewDidLayoutSubviews
 {
     if (self.firstTimeLoad) {
@@ -74,9 +80,7 @@
         NSLog(@"%@", self.wholeArticle);
         
         
-        
         [self doTextAnalytics:self.wholeArticle];
-        
         
         self.firstTimeLoad = NO;
     }
@@ -94,6 +98,7 @@
     
     [manager GET:@"https://aylien-text.p.mashape.com/hashtags" parameters:params success:^(YQHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
+        [self parseTextAnaltyicsResult:responseObject];
         
         
     } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
@@ -103,6 +108,46 @@
         
     }];
 }
+
+/*!
+ Multiply hashtags.
+ */
+- (void)parseTextAnaltyicsResult:(NSDictionary *) results
+{
+    NSArray *conceptsResults = [results objectForKey:@"hashtags"];
+    
+    YQParseQuery *query = [YQParseQuery queryWithClassName:@"Keywords"];
+    [query whereKey:@"string" equalTo:@"astronauts"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (YQParseObject *object in objects) {
+                NSLog(@"objectId - %@", object.objectId);
+                
+                NSDictionary *belongTo = [object.responseJSON objectForKey:@"belongTo"];
+                NSString *adObjectId = [belongTo objectForKey:@"objectId"];
+                [self loadAdImageWithObjectId:adObjectId];
+                
+            }
+        }
+    }];
+}
+
+-(void)loadAdImageWithObjectId:(NSString *) objectId
+{
+    YQParseQuery *query = [YQParseQuery queryWithClassName:@"Ads"];
+    [query getObjectInBackgroundWithId:objectId block:^(YQParseObject *object, NSError *error) {
+        if (!error) {
+            self.ad = [[Ad alloc] initWithYQParseObject:object];
+            
+            // NSDictionary *imageFile = [object.responseJSON objectForKey:@"image"];
+            // self.imageURL = [[NSURL alloc] initWithString:[screenshot1 objectForKey:@"url"]];
+            
+        }
+    }];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -143,7 +188,8 @@
         return [AdTableViewCell cellHeight];
     }
     else {
-        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
+        int blockIndex = [self getBlockIndex:indexPath.row];
+        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
         return [ArticleBlockTableViewCell cellHeightWithText:tempText];
     }
 }
@@ -153,13 +199,15 @@
     NSString static *articleCellIdentifier = @"ArticleCellIdentifier";
     NSString static *adCellIdentifier = @"AdCellIdentifier";
     
+    NSLog(@"%i", indexPath.row);
+    
     if (indexPath.row == self.adPosition) {
-        AdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articleCellIdentifier];
+        AdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:adCellIdentifier];
         if (cell == nil) {
             cell = [[AdTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:adCellIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-        
+        [cell loadCell];
         return cell;
     }
     else {
@@ -169,12 +217,27 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         // Configure the cell...
-        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:indexPath.row]];
+        
+        int blockIndex = [self getBlockIndex:indexPath.row];
+
+        
+        NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
         [cell loadCellWithText:tempText];
         return cell;
     }
+}
+
+- (int) getBlockIndex:(int)currentIndexRow
+{
+    int blockIndex;
     
-    
+    if(currentIndexRow <= self.adPosition){
+        blockIndex = currentIndexRow;
+    }
+    else {
+        blockIndex = currentIndexRow-1;
+    }
+    return blockIndex;
 }
 
 

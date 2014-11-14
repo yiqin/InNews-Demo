@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) UIImageView *adImageView;
 
+- (void)loadCell;
+
 + (CGFloat)cellHeight;
+
 
 @end

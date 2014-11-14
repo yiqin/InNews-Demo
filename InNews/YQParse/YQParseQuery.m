@@ -101,4 +101,9 @@
     [self.parameters setValue:self.where forKey:@"where"];
 }
 
+- (void)whereKey:(NSString *)constraintKey containedIn:(NSArray *)constraintValue
+{
+    
+}
+
 @end
