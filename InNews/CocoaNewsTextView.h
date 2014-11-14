@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ArticleBlock.h"
 
-@interface CocoaNewsTextField : UIView
+@interface CocoaNewsTextView : UIView
 
 @property(strong, nonatomic) UIFont *font;
 @property(strong, nonatomic) NSString* text;

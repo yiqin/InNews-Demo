@@ -33,7 +33,7 @@
 		8DAAADB61A156AE20003573B /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADA61A156AE20003573B /* YQParseUser.m */; };
 		8DAAADB91A15768C0003573B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADB81A15768C0003573B /* SecondViewController.m */; };
 		8DAAADBC1A1578720003573B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAAADBB1A1578720003573B /* iAd.framework */; };
-		8DAAADBF1A157E3A0003573B /* CocoaNewsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADBE1A157E3A0003573B /* CocoaNewsTextField.m */; };
+		8DAAADBF1A157E3A0003573B /* CocoaNewsTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADBE1A157E3A0003573B /* CocoaNewsTextView.m */; };
 		8DAAADC21A1582920003573B /* ArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC11A1582920003573B /* ArticleTableViewController.m */; };
 		8DAAADC51A1586730003573B /* ArticleBlockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC41A1586730003573B /* ArticleBlockTableViewCell.m */; };
 		8DAAADC81A1591190003573B /* CocoaNewsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAADC71A1591190003573B /* CocoaNewsLabel.m */; };
@@ -115,8 +115,8 @@
 		8DAAADB71A15768C0003573B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		8DAAADB81A15768C0003573B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8DAAADBB1A1578720003573B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		8DAAADBD1A157E3A0003573B /* CocoaNewsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaNewsTextField.h; sourceTree = "<group>"; };
-		8DAAADBE1A157E3A0003573B /* CocoaNewsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaNewsTextField.m; sourceTree = "<group>"; };
+		8DAAADBD1A157E3A0003573B /* CocoaNewsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaNewsTextView.h; sourceTree = "<group>"; };
+		8DAAADBE1A157E3A0003573B /* CocoaNewsTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaNewsTextView.m; sourceTree = "<group>"; };
 		8DAAADC01A1582920003573B /* ArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewController.h; sourceTree = "<group>"; };
 		8DAAADC11A1582920003573B /* ArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewController.m; sourceTree = "<group>"; };
 		8DAAADC31A1586730003573B /* ArticleBlockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleBlockTableViewCell.h; sourceTree = "<group>"; };
@@ -238,8 +238,8 @@
 			children = (
 				8DAAAD801A1569DC0003573B /* CocoaNews.h */,
 				8DAAAD811A1569DC0003573B /* CocoaNews.m */,
-				8DAAADBD1A157E3A0003573B /* CocoaNewsTextField.h */,
-				8DAAADBE1A157E3A0003573B /* CocoaNewsTextField.m */,
+				8DAAADBD1A157E3A0003573B /* CocoaNewsTextView.h */,
+				8DAAADBE1A157E3A0003573B /* CocoaNewsTextView.m */,
 				8DAAADC01A1582920003573B /* ArticleTableViewController.h */,
 				8DAAADC11A1582920003573B /* ArticleTableViewController.m */,
 				8DAAADD01A15CF750003573B /* Ad.h */,
@@ -469,7 +469,7 @@
 				8DAAADE21A1600830003573B /* SWLongPressGestureRecognizer.m in Sources */,
 				8DAAADA81A156AE20003573B /* YQHTTPRequestOperationManager.m in Sources */,
 				8DAAAD5C1A1569890003573B /* main.m in Sources */,
-				8DAAADBF1A157E3A0003573B /* CocoaNewsTextField.m in Sources */,
+				8DAAADBF1A157E3A0003573B /* CocoaNewsTextView.m in Sources */,
 				8DAAADC81A1591190003573B /* CocoaNewsLabel.m in Sources */,
 				8DAAADAD1A156AE20003573B /* YQURLRequestSerialization.m in Sources */,
 				8DAAADE51A1600830003573B /* SWUtilityButtonView.m in Sources */,

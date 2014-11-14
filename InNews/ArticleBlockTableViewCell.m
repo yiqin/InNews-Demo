@@ -7,7 +7,7 @@
 //
 
 #import "ArticleBlockTableViewCell.h"
-#import "CocoaNewsTextField.h"
+#import "CocoaNewsTextView.h"
 #import "CocoaNewsLabel.h"
 
 @interface ArticleBlockTableViewCell()
@@ -73,12 +73,12 @@
     switch (style) {
         case UIArticleStyleDefault:
             self.borderView.hidden = YES;
-            [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextField getFont] text:text];
+            [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextView getFont] text:text];
             self.paragraphLabel.textColor = [UIColor blackColor];
             break;
         case UIArticleStyleOne:
             self.borderView.hidden = NO;
-            [self.paragraphLabel setFrame:CGRectMake(22, 8, 300-10-22, 10) font:[CocoaNewsTextField getFontTwo] text:text];
+            [self.paragraphLabel setFrame:CGRectMake(22, 8, 300-10-22, 10) font:[CocoaNewsTextView getFontTwo] text:text];
             // self.paragraphLabel.textColor = [UIColor grayColor];
             self.paragraphLabel.textColor = self.colorTwo;
             self.borderView.frame = CGRectMake(10, 8+2, 5, CGRectGetHeight(self.paragraphLabel.frame)-4);
@@ -118,10 +118,10 @@
     
     switch (style) {
         case UIArticleStyleDefault:
-            [cocoaNewsLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextField getFont] text:text];
+            [cocoaNewsLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextView getFont] text:text];
             break;
         case UIArticleStyleOne:
-            [cocoaNewsLabel setFrame:CGRectMake(22, 8, 300-10-22, 10) font:[CocoaNewsTextField getFontTwo] text:text];
+            [cocoaNewsLabel setFrame:CGRectMake(22, 8, 300-10-22, 10) font:[CocoaNewsTextView getFontTwo] text:text];
             break;
         default:
             break;

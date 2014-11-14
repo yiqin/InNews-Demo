@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CocoaNewsTextField.h"
+#import "CocoaNewsTextView.h"
 
 @interface CocoaNews : NSObject
 

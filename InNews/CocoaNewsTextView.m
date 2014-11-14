@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "CocoaNewsTextField.h"
+#import "CocoaNewsTextView.h"
 #import "ArticleTableViewController.h"
 #import "ArticleBlock.h"
 #import "YQParse.h"
 
-@interface CocoaNewsTextField()
+@interface CocoaNewsTextView()
 
 @property(strong, nonatomic) ArticleTableViewController *articleTVC;
 @property(strong, nonatomic) NSMutableDictionary *blocks;
@@ -20,7 +20,7 @@
 @end
 
 
-@implementation CocoaNewsTextField
+@implementation CocoaNewsTextView
 
 
 -(instancetype)initWithFrame:(CGRect)frame

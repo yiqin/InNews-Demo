@@ -28,6 +28,8 @@
 
 @property(nonatomic) BOOL firstTimeLoad;
 
+@property(nonatomic, strong) NSArray *hashtagsResult;
+
 @end
 
 @implementation ArticleTableViewController
@@ -46,12 +48,12 @@
         
         self.blocks = [[NSMutableDictionary alloc] init];
         self.wholeArticle = [[NSMutableString alloc] init];
-        self.adPosition = 3;
+        self.adPosition = rand()%2 + 2;
         
         // Change it later.
         self.hasAd = NO;
         
-        
+        self.hashtagsResult = [[NSArray alloc] init];
         self.firstTimeLoad = YES;
     }
     return self;
@@ -121,6 +123,8 @@
 {
     NSArray *hashtagsResults = [results objectForKey:@"hashtags"];
     
+    self.hashtagsResult = hashtagsResults;
+    
     YQParseQuery *query = [YQParseQuery queryWithClassName:@"Keywords"];
     [query whereKey:@"string" containedIn:hashtagsResults];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -160,7 +164,7 @@
     
     [YQParseAnalytics trackEvent:@"Impressions" dimensions:@{@"Advertiser":self.ad.title}];
     
-    [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
     
 }
@@ -430,6 +434,13 @@
     return YES;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ((indexPath.row == self.adPosition) && (self.hasAd == YES)) {
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Keywords" message:[NSString stringWithFormat:@"%@", self.hashtagsResult] delegate:self cancelButtonTitle:@"Good" otherButtonTitles:nil];
+        [av show];
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.
