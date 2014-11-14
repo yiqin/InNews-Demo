@@ -13,10 +13,12 @@
 
 - (instancetype)initWithText:(NSString *)text;
 - (instancetype)initWithImage:(UIImage *)articleImage;
+- (instancetype)initWithImageURL:(NSURL *)url;
 
 @property(nonatomic) BOOL isText;
 @property(strong, nonatomic) NSString* text;
 @property (strong, nonatomic) UIImage *articleImage;
 
+@property (nonatomic) int currentIndex;
 
 @end

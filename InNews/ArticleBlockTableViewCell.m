@@ -46,6 +46,11 @@
     [self.paragraphLabel setFrame:CGRectMake(5, 8, 300-10, 10) font:[CocoaNewsTextField getFont] text:text];
 }
 
+- (void)loadCellWithImage:(UIImage *)image
+{
+    [self.articleImageView setImage:image];
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }
@@ -72,14 +77,10 @@
 - (void) loadCellWithArticleBlock:(ArticleBlock *)articleBlock
 {
     if (articleBlock.isText) {
-        
-        
         [self loadCellWithText:articleBlock.text];
-        
-        
     }
     else {
-        
+        // [self loadCellWithImage:articleBlock.articleImage];
     }
 }
 

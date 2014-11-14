@@ -7,6 +7,7 @@
 //
 
 #import "ArticleBlock.h"
+#import "YQparse.h"
 
 @implementation ArticleBlock
 
@@ -14,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        
+        _currentIndex = 0;
     }
     return self;
 }
@@ -40,5 +41,37 @@
     }
     return self;
 }
+
+- (instancetype)initWithImageURL:(NSURL *)url
+{
+    self = [self init];
+    if (self) {
+        _isText = NO;
+        _text = nil;
+    }
+    return self;
+}
+
+- (void)loadImage:(NSURL *)url
+{
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
+    
+    
+    YQHTTPRequestOperation *requestOperation = [[YQHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    requestOperation.responseSerializer = [YQImageResponseSerializer serializer];
+    [requestOperation setCompletionBlockWithSuccess:^(YQHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Load image successfully.");
+        // self.adImageView = [[UIImageView alloc] initWithImage:responseObject];
+        self.articleImage = responseObject;
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ImageIsReady" object:nil userInfo:@{@"currentIndex":[NSNumber numberWithInt:index]}];
+        
+    } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Image error: %@", error);
+        
+    }];
+    [requestOperation start];
+}
+
 
 @end

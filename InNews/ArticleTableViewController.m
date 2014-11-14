@@ -38,6 +38,7 @@
     if (self) {
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginToInsertAd) name:@"AdIsReady" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateImage:) name:@"ImageIsReady" object:nil];
         
         // self.view.backgroundColor = [UIColor yellowColor];
         self.tableView.separatorColor = [UIColor clearColor];
@@ -152,7 +153,7 @@
 {
     self.hasAd = YES;
     
-    NSIndexPath *path1 = [NSIndexPath indexPathForRow:self.adPosition inSection:0]; //ALSO TRIED WITH indexPathRow:0
+    NSIndexPath *path1 = [NSIndexPath indexPathForRow:self.adPosition inSection:0];
     NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
     
     [self.tableView beginUpdates];
@@ -160,6 +161,20 @@
     [YQParseAnalytics trackEvent:@"Impressions" dimensions:@{@"Advertiser":self.ad.title}];
     
     [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView endUpdates];
+    
+}
+
+- (void)updateImage:(NSNotification *)notification
+{
+    
+    NSDictionary *dict = [notification userInfo];
+    NSNumber *tempNumber = [dict objectForKey:@"currentIndex"];
+    
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:tempNumber.intValue inSection:0];
+    
+    [self.tableView beginUpdates];
+    // [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
     
 }
