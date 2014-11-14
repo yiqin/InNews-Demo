@@ -36,6 +36,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginToInsertAd) name:@"AdIsReady" object:nil];
+        
         // self.view.backgroundColor = [UIColor yellowColor];
         self.tableView.separatorColor = [UIColor clearColor];
         
@@ -44,7 +47,7 @@
         self.adPosition = 2;
         
         // Change it later.
-        self.hasAd = YES;
+        self.hasAd = NO;
         
         
         self.firstTimeLoad = YES;
@@ -100,11 +103,8 @@
         NSLog(@"JSON: %@", responseObject);
         [self parseTextAnaltyicsResult:responseObject];
         
-        
     } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
-        
-        
         
     }];
 }
@@ -138,16 +138,15 @@
     [query getObjectInBackgroundWithId:objectId block:^(YQParseObject *object, NSError *error) {
         if (!error) {
             self.ad = [[Ad alloc] initWithYQParseObject:object];
-            
-            // NSDictionary *imageFile = [object.responseJSON objectForKey:@"image"];
-            // self.imageURL = [[NSURL alloc] initWithString:[screenshot1 objectForKey:@"url"]];
-            
         }
     }];
-    
-    
 }
 
+- (void)beginToInsertAd
+{
+    self.hasAd = YES;
+    [self.tableView reloadData];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -207,7 +206,7 @@
             cell = [[AdTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:adCellIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-        [cell loadCell];
+        [cell loadCell:self.ad];
         return cell;
     }
     else {

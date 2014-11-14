@@ -42,6 +42,9 @@
             NSLog(@"Load image successfully.");
             self.adImageView = [[UIImageView alloc] initWithImage:responseObject];
             
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"AdIsReady" object:nil];
+            
+            
         } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Image error: %@", error);
             
@@ -49,6 +52,5 @@
         [requestOperation start];
     }
 }
-
 
 @end

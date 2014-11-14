@@ -32,9 +32,9 @@
     [self addSubview:self.adImageView];
 }
 
-- (void)loadCell
+- (void)loadCell:(Ad *) ad
 {
-    self.adImageView.image = [UIImage imageNamed:@"testAd1.png"];
+    self.adImageView.image = ad.adImageView.image;
 }
 
 - (void)awakeFromNib

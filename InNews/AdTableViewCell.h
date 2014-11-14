@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ad.h"
 
 @interface AdTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) UIImageView *adImageView;
 
-- (void)loadCell;
+- (void)loadCell:(Ad *) ad;
 
 + (CGFloat)cellHeight;
 
