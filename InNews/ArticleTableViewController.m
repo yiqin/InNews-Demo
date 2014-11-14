@@ -147,7 +147,14 @@
 - (void)beginToInsertAd
 {
     self.hasAd = YES;
-    [self.tableView reloadData];
+    
+    NSIndexPath *path1 = [NSIndexPath indexPathForRow:self.adPosition inSection:0]; //ALSO TRIED WITH indexPathRow:0
+    NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
+    
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView endUpdates];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -220,7 +227,6 @@
         // Configure the cell...
         
         int blockIndex = [self getBlockIndex:indexPath.row];
-
         
         NSString *tempText = [self.blocks objectForKey:[NSNumber numberWithInt:blockIndex]];
         [cell loadCellWithText:tempText];
@@ -256,17 +262,24 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    if (indexPath.row == self.adPosition) {
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+            // Delete the row from the data source
+            
+            self.hasAd = NO;
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+        } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+
+    
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
